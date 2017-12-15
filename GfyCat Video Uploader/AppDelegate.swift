@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVKit
+import AssetsLibrary
+import Photos
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        print("Requesting access to \"AVCaptureDevice\"...")
+        AVCaptureDevice.requestAccess(
+            for: .video,
+            completionHandler: { response in
+                if response {
+                    print("\"AVCaptureDevice\" access granted")
+                } else {
+                    print("\"AVCaptureDevice\" access denied")
+                }
+        })
+
+        
+        //Photos
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized {
+                    print("User authorized camera roll access")
+                } else {
+                    print("User denied camera roll access")
+                }
+            })
+        }
+        
         return true
     }
 
