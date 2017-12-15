@@ -13,6 +13,7 @@
 		1ABBF9991FE33E2E0018769F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF9971FE33E2E0018769F /* Main.storyboard */; };
 		1ABBF99B1FE33E2E0018769F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF99A1FE33E2E0018769F /* Assets.xcassets */; };
 		1ABBF99E1FE33E2E0018769F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF99C1FE33E2E0018769F /* LaunchScreen.storyboard */; };
+		1ABBF9A61FE34E480018769F /* WebRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9A51FE34E480018769F /* WebRequestObj.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1ABBF99A1FE33E2E0018769F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ABBF99D1FE33E2E0018769F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ABBF99F1FE33E2E0018769F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ABBF9A51FE34E480018769F /* WebRequestObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestObj.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */ = {
 			isa = PBXGroup;
 			children = (
-				1ABBF9911FE33E2E0018769F /* AppDelegate.swift */,
-				1ABBF9931FE33E2E0018769F /* FirstViewController.swift */,
-				1ABBF9951FE33E2E0018769F /* SecondViewController.swift */,
-				1ABBF9971FE33E2E0018769F /* Main.storyboard */,
+				1ABBF9A91FE3504C0018769F /* Objects */,
+				1ABBF9A71FE34FEC0018769F /* View Controllers */,
 				1ABBF99A1FE33E2E0018769F /* Assets.xcassets */,
-				1ABBF99C1FE33E2E0018769F /* LaunchScreen.storyboard */,
+				1ABBF9911FE33E2E0018769F /* AppDelegate.swift */,
 				1ABBF99F1FE33E2E0018769F /* Info.plist */,
+				1ABBF9971FE33E2E0018769F /* Main.storyboard */,
+				1ABBF99C1FE33E2E0018769F /* LaunchScreen.storyboard */,
 			);
 			path = "GfyCat Video Uploader";
+			sourceTree = "<group>";
+		};
+		1ABBF9A71FE34FEC0018769F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1ABBF9931FE33E2E0018769F /* FirstViewController.swift */,
+				1ABBF9951FE33E2E0018769F /* SecondViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1ABBF9A91FE3504C0018769F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1ABBF9A51FE34E480018769F /* WebRequestObj.swift */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +118,7 @@
 				TargetAttributes = {
 					1ABBF98D1FE33E2E0018769F = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -139,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABBF9A61FE34E480018769F /* WebRequestObj.swift in Sources */,
 				1ABBF9961FE33E2E0018769F /* SecondViewController.swift in Sources */,
 				1ABBF9921FE33E2E0018769F /* AppDelegate.swift in Sources */,
 				1ABBF9941FE33E2E0018769F /* FirstViewController.swift in Sources */,
@@ -196,7 +216,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -253,7 +274,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -278,12 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZM57TK6EDW;
 				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tylero056.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,12 +316,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZM57TK6EDW;
 				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tylero056.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
