@@ -13,7 +13,7 @@ import CoreVideo
 
 /// FirstViewController displays the view controller allowing the user to select and upload
 /// media to http://online-convert.com/ through the use of their photo library or cloud drive(s)
-class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
+class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
     @IBOutlet var mainView: UILabel!
     @IBOutlet var selectFileBtn: UIButton!
     @IBOutlet var uploadBtn: UIButton!
@@ -117,7 +117,6 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 
                 print("Adjusting image view rect width to fit image ratio...")
                 self.imgView.frame.size = CGSize(
-                    //self.imgView.frame.size = CGSize(
                     width: tmpImgContainerView.frame.width,
                     height: tmpHeight
                 )
@@ -126,7 +125,6 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 
                 print("Adjusting image view rect height to fit image ratio...")
                 self.imgView.frame.size = CGSize(
-                    //self.imgView.frame.size = CGSize(
                     width: tmpWidth,
                     height: tmpImgContainerView.frame.height
                 )
@@ -145,16 +143,6 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         print("Resizing image view frame...")
         self.imgView.frame.size = tmpImgContainerView.frame.size
-        
-        // test test test test test
-        /*
-        let success = setImgViewImg(withUIImage: self.selectedImg)
-        if !success {
-            print(self.errMsg)
-        }
- */
-        //self.imgView.image = self.selectedImg == nil ? UIImage() : self.selectedImg
-        // test teat test test test
         
         print("Image frame size changes applied successfully")
         print("Reloading input views...")
@@ -228,20 +216,8 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        //imgView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        //self.selectedImg = info[UIImagePickerControllerOriginalImage] as? UIImage
-        //self.imgView.image = info[UIImagePickerControllerPHAsset] as? UIImage
-        //self.updateImgView()
         
-        
-        
-        //picker.delegate = self
-        //picker.allowsEditing = true
-        //picker.sourceType = .photoLibrary
-        
-    
-        
-        
+        // determine media type
         if let mediaType = info[UIImagePickerControllerMediaType] as? String {
             switch mediaType {
             case SupportedMediaTypes.image:
@@ -258,8 +234,6 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
                     
                     self.selectedImg = tmpImg
                     
-                    //self.imgView.frame.size =
-                    //self.imgView.reloadInputViews()
                     if let tmpImg = self.selectedImg {
                         print("Applying image selection...")
                         self.imgView.image = tmpImg
@@ -312,27 +286,20 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
                     
                     let videoView: UIView = vidPlayerViewController.view
                     //videoView.frame = scrollView.frame
-                    videoView.frame.size = self.imgView.frame.size
+                    videoView.frame.size = CGSize(width: self.imgView.frame.width, height: vidPlayer.currentItem?.presentationSize.height)
+                    //videoView.frame.size = self.imgView.frame.size
                     
+                    /*
                     if let vidPlayer = vidPlayerViewController.player {
                         self.scrollView.isHidden = true
                         
                         // self.view.addSubview(videoView)
                     }
+                    */
                     
                     vidPlayer.playImmediately(atRate: 1.0)
-                    
-                    //self.scrollView.addSubview(vidPlayerViewController.view)
-                    //self.view.addSubview(vidPlayerViewController.view)
                     self.view.addSubview(videoView)
                     self.view.addSubview(playBtn)
-                    //self.view.bringSubview(toFront: videoView)
-                    
-                    /*
-                    self.present(videoPlayerViewController, animated: true) {
-                        videoPlayerViewController.player?.play()
-                    }*/
-                    
                 }
             default:
                 break
