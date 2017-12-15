@@ -286,8 +286,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     
                     let videoView: UIView = vidPlayerViewController.view
                     //videoView.frame = scrollView.frame
-                    videoView.frame.size = CGSize(width: self.imgView.frame.width, height: vidPlayer.currentItem?.presentationSize.height)
-                    //videoView.frame.size = self.imgView.frame.size
+                    //videoView.frame.size = CGSize(width: self.imgView.frame.width, height: (vidPlayer.currentItem?.presentationSize.height)!)
+                    videoView.frame.size = self.imgView.frame.size
                     
                     /*
                     if let vidPlayer = vidPlayerViewController.player {

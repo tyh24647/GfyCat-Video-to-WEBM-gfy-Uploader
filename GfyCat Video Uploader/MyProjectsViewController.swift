@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyUploadsViewController: UITableViewController {
+class MyProjectsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

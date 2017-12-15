@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */; };
+		1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */; };
+		1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */; };
+		1A7DC7CB1FE421D5009F834E /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C91FE421D5009F834E /* FileTableViewCell.swift */; };
+		1A7DC7CC1FE421D5009F834E /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */; };
+		1A7DC7CF1FE423BE009F834E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */; };
+		1A7DC7D01FE423BE009F834E /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */; };
 		1ABBF9921FE33E2E0018769F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9911FE33E2E0018769F /* AppDelegate.swift */; };
 		1ABBF9941FE33E2E0018769F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9931FE33E2E0018769F /* UploadViewController.swift */; };
 		1ABBF9961FE33E2E0018769F /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */; };
@@ -17,7 +24,7 @@
 		1ABBF9F31FE3B6900018769F /* MediaTypeDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9F21FE3B6900018769F /* MediaTypeDefaults.swift */; };
 		1AF269C81FE3D7890093C568 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269C71FE3D7890093C568 /* ViewConstants.swift */; };
 		1AF269CA1FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */; };
-		1AF269CC1FE3EEFE0093C568 /* MyUploadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269CB1FE3EEFE0093C568 /* MyUploadsViewController.swift */; };
+		1AF269CC1FE3EEFE0093C568 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */; };
 		1AF269CE1FE3F0B60093C568 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269CD1FE3F0B60093C568 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +42,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
+		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
+		1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		1A7DC7C91FE421D5009F834E /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
+		1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		1ABBF98E1FE33E2E0018769F /* GfyCat Video Uploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GfyCat Video Uploader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABBF9911FE33E2E0018769F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABBF9931FE33E2E0018769F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +61,7 @@
 		1ABBF9F21FE3B6900018769F /* MediaTypeDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeDefaults.swift; sourceTree = "<group>"; };
 		1AF269C71FE3D7890093C568 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
-		1AF269CB1FE3EEFE0093C568 /* MyUploadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUploadsViewController.swift; sourceTree = "<group>"; };
+		1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		1AF269CD1FE3F0B60093C568 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +76,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A7DC7C01FE415F7009F834E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A7DC7C81FE42089009F834E /* Nibs */,
+				1A7DC7C71FE42069009F834E /* Table View Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1A7DC7C71FE42069009F834E /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */,
+				1A7DC7C91FE421D5009F834E /* FileTableViewCell.swift */,
+				1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		1A7DC7C81FE42089009F834E /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */,
+				1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */,
+				1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
 		1ABBF9851FE33E2E0018769F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +126,7 @@
 			children = (
 				1ABBF9F11FE3B6400018769F /* Constants and Defaults */,
 				1ABBF9A91FE3504C0018769F /* Objects */,
+				1A7DC7C01FE415F7009F834E /* Views */,
 				1ABBF9A71FE34FEC0018769F /* View Controllers */,
 				1ABBF99A1FE33E2E0018769F /* Assets.xcassets */,
 				1ABBF99F1FE33E2E0018769F /* Info.plist */,
@@ -99,8 +143,9 @@
 				1ABBF9931FE33E2E0018769F /* UploadViewController.swift */,
 				1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */,
 				1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */,
-				1AF269CB1FE3EEFE0093C568 /* MyUploadsViewController.swift */,
+				1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */,
 				1AF269CD1FE3F0B60093C568 /* WebViewController.swift */,
+				1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -182,9 +227,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7DC7D01FE423BE009F834E /* SettingsTableViewCell.xib in Resources */,
 				1ABBF99E1FE33E2E0018769F /* LaunchScreen.storyboard in Resources */,
+				1A7DC7CC1FE421D5009F834E /* FileTableViewCell.xib in Resources */,
 				1ABBF99B1FE33E2E0018769F /* Assets.xcassets in Resources */,
 				1ABBF9991FE33E2E0018769F /* Main.storyboard in Resources */,
+				1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,12 +244,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF269C81FE3D7890093C568 /* ViewConstants.swift in Sources */,
+				1A7DC7CB1FE421D5009F834E /* FileTableViewCell.swift in Sources */,
 				1AF269CE1FE3F0B60093C568 /* WebViewController.swift in Sources */,
 				1ABBF9A61FE34E480018769F /* WebRequestObj.swift in Sources */,
+				1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */,
+				1A7DC7CF1FE423BE009F834E /* SettingsTableViewCell.swift in Sources */,
 				1ABBF9961FE33E2E0018769F /* FileManagerViewController.swift in Sources */,
 				1ABBF9921FE33E2E0018769F /* AppDelegate.swift in Sources */,
 				1ABBF9F31FE3B6900018769F /* MediaTypeDefaults.swift in Sources */,
-				1AF269CC1FE3EEFE0093C568 /* MyUploadsViewController.swift in Sources */,
+				1AF269CC1FE3EEFE0093C568 /* MyProjectsViewController.swift in Sources */,
+				1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */,
 				1AF269CA1FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift in Sources */,
 				1ABBF9941FE33E2E0018769F /* UploadViewController.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FileManagerViewController: UIViewController {
+class FileManagerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,11 @@ class FileManagerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var fileCell = FileCell()
+        
+        
+        return fileCell
+    }
 }
 
