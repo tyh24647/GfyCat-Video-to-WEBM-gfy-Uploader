@@ -425,7 +425,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func sendImgUploadRequest() -> Void {
-        var uploadRequestURL = ""
+        let uploadRequestURL = ""
         /*
          TODO: figure out web request to online-convert.com
          */
