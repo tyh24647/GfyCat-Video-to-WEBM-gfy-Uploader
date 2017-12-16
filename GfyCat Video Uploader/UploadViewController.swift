@@ -35,39 +35,23 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         configureImgView()
         configureScrollView()
+        configureTabBarExtras()
     }
     
-    @discardableResult func configureScrollView() -> UIScrollView! {
-        if self.scrollView == nil {
-            self.scrollView = UIScrollView()
-            self.scrollView.addSubview(self.imgView == nil ? configureImgView() : self.imgView)
-        }
+    
+    /// Configures the tab bar view customizations when the upload view is being loaded
+    ///
+    /// - Returns: The updated tab bar, if present
+    @discardableResult func configureTabBarExtras() -> UITabBar! {
+        var hasTabBar = false
         
-        if self.scrollView.delegate == nil {
-            self.scrollView.delegate = self
-        }
-        
-        self.scrollView.minimumZoomScale = ViewConstants.defaultMinZoomScale
-        self.scrollView.maximumZoomScale = ViewConstants.defaultMaxZoomScale
-        //self.scrollView.autoresizesSubviews = true
-        self.scrollView.contentMode = .scaleToFill
-        
-        //test test test test test test test test
+        // add subtle button under tab bar
         let tmpBtn = UIButton(type: .custom)
         tmpBtn.backgroundColor = .white
         tmpBtn.isOpaque = true
         
-        /*
-        tmpBtn.frame = CGRect(
-            origin: self.tabBarController!.tabBar.center,
-            size: CGSize(
-                width: 75,
-                height: 75
-            )
-        )
-         */
         if let tabBar = self.tabBarController?.tabBar {
-            
+            hasTabBar = true
             let btnImg = UIImage(named: "Image")!   // TODO - change to a constant and make sure image is part of build target
             
             tmpBtn.frame = CGRect(
@@ -94,39 +78,37 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             self.view.addSubview(tmpBtn)
             self.view.layoutIfNeeded()
-            //self.view.addSubview(tmpBtn)
         }
         
-        /*
-         button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
-         button.setBackgroundImage(buttonImage, forState: UIControlState.Normal)
-         button.setBackgroundImage(buttonImageHighlighted, forState: UIControlState.Highlighted)
-         
-         let heightDifference:CGFloat = buttonImage.size.height - self.tabBar.frame.size.height;
-         if (heightDifference < 0) {
-         button.center = self.tabBar.center;
-         } else {
-         var center: CGPoint = self.tabBar.center;
-         center.y = center.y - heightDifference/2.0;
-         button.center = center;
-         }
-         
-         
-         self.view.addSubview(button)
-         */
+        return hasTabBar ? tabBar : super.tabBarController?.tabBar
+    }
+    
+    
+    /// Configures the scroll view preferences after initialization
+    ///
+    /// - Returns: The custom scroll view
+    @discardableResult func configureScrollView() -> UIScrollView! {
+        if self.scrollView == nil {
+            self.scrollView = UIScrollView()
+            self.scrollView.addSubview(self.imgView == nil ? configureImgView() : self.imgView)
+        }
         
-        //tmpCenterUploadBtn.isOpaque = true
+        if self.scrollView.delegate == nil {
+            self.scrollView.delegate = self
+        }
         
+        self.scrollView.minimumZoomScale = ViewConstants.defaultMinZoomScale
+        self.scrollView.maximumZoomScale = ViewConstants.defaultMaxZoomScale
         
-        //self.view.addSubview(tmpCenterUploadBtn)
-        //self.view.bringSubview(toFront: tmpCenterUploadBtn)
-        //self.view.layoutIfNeeded()
-        //test test test test test test test test
- 
+        self.scrollView.contentMode = .scaleToFill
         
         return self.scrollView
     }
     
+    
+    /// Configures the image view preferences after initialization
+    ///
+    /// - Returns: The custom image view
     @discardableResult func configureImgView() -> UIImageView! {
         if self.imgView == nil {
             self.imgView = UIImageView()
@@ -145,10 +127,20 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         return self.imgView
     }
     
+    
+    /// Assigns the specified view to be the primary view in which the
+    /// user can use gestures to zoom in/out
+    ///
+    /// - Parameter scrollView: The scroll view in which to apply the
+    ///                         scrolling functionality within the scroll view
+    /// - Returns: The appropriate view to be zoomed in/out
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imgView
     }
     
+    
+    /// Updates and resizes the image view container upon changes
+    /// to the selected image file
     func updateImgView() -> Void {
         var tmpImgContainerView = UIView(frame: ViewConstants.defaultContainerRect)
         
@@ -222,6 +214,12 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         print("Image view changes applied successfully")
     }
     
+    
+    /// Assigns the ImageView image to the specified image as long as the
+    /// image file selected by the user is not null and is a valid image type
+    ///
+    /// - Parameter newImg: The image selected by the user to display
+    /// - Returns: True if the operation was successful, else false
     func setImgViewImg(withUIImage newImg: UIImage!) -> Bool {
         var success = false
         
@@ -431,11 +429,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @objc func playBtnPressed(_ sender: UIButton!) {
         #if DEBUG
-            print("Button pressed: \"\(playBtn.title(for: .normal).debugDescription)\"")
+            print("Button pressed: \"\(self.playBtn.title(for: .normal).debugDescription)\"")
         #endif
-        vidPlayer.rate == 0 ? vidPlayer.play() : vidPlayer.pause()
-        playBtn.setTitle(
-            vidPlayer.rate != 0 ?
+        self.vidPlayer.rate == 0 ? self.vidPlayer.play() : self.vidPlayer.pause()
+        self.playBtn.setTitle(
+            self.vidPlayer.rate != 0 ?
                 ViewConstants.defaultPlayButtonPlayTitle
                 : ViewConstants.defaultPlayButtonPauseTitle,
             for: .normal
@@ -444,16 +442,16 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @discardableResult func playVideo() -> Bool {
         var operationSuccessful = false
-        if vidPlayer != nil {
+        if self.vidPlayer != nil {
             #if DEBUG
                 print("Attempting to play selected video in default player...")
             #endif
-            vidPlayer.play()
+            self.vidPlayer.play()
             operationSuccessful = true
             #if DEBUG
                 print("Playing video")
             #endif
-            playBtn.setTitle(
+            self.playBtn.setTitle(
                 ViewConstants.defaultPlayButtonPauseTitle,
                 for: .normal
             )
@@ -464,16 +462,16 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @discardableResult func pauseVideo() -> Bool {
         var operationSuccessful = false
-        if vidPlayer != nil {
+        if self.vidPlayer != nil {
             #if DEBUG
                 print("Attempting to pause selected video in default player...")
             #endif
-            vidPlayer.play()
+            self.vidPlayer.play()
             operationSuccessful = true
             #if DEBUG
                 print("Pausing video")
             #endif
-            playBtn.setTitle(
+            self.playBtn.setTitle(
                 ViewConstants.defaultPlayButtonPauseTitle,
                 for: .normal
             )
