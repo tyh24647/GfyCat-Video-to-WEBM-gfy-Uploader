@@ -20,6 +20,13 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+ 
+        /*
+        var tabBarItems = self.tabBarController?.toolbarItems
+        for var tBItem! in tabBarItems {
+            
+        }
+        */
         
         self.selectedIndex = 2
     }

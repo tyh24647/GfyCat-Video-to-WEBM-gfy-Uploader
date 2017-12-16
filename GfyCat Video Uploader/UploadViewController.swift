@@ -52,6 +52,78 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         //self.scrollView.autoresizesSubviews = true
         self.scrollView.contentMode = .scaleToFill
         
+        //test test test test test test test test
+        let tmpBtn = UIButton(type: .custom)
+        tmpBtn.backgroundColor = .white
+        tmpBtn.isOpaque = true
+        
+        /*
+        tmpBtn.frame = CGRect(
+            origin: self.tabBarController!.tabBar.center,
+            size: CGSize(
+                width: 75,
+                height: 75
+            )
+        )
+         */
+        if let tabBar = self.tabBarController?.tabBar {
+            
+            let btnImg = UIImage(named: "Image")!   // TODO - change to a constant and make sure image is part of build target
+            
+            tmpBtn.frame = CGRect(
+                x: 0,
+                y: 0,
+                width: btnImg.size.width + 20,
+                height: btnImg.size.height - 10
+            )
+            
+            tmpBtn.setBackgroundImage(
+                btnImg,
+                for: .normal
+            )
+            
+            let heightDifference = btnImg.size.height - tabBar.frame.size.height
+            //let heightDifference = btnImg.size.height - self.tabBarController!.tabBar.frame.size.height
+            if heightDifference < 0 {
+                tmpBtn.center = tabBar.center
+            } else {
+                var center = tabBar.center
+                center.y -= heightDifference / 2.0
+                tmpBtn.center = center
+            }
+            
+            self.view.addSubview(tmpBtn)
+            self.view.layoutIfNeeded()
+            //self.view.addSubview(tmpBtn)
+        }
+        
+        /*
+         button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+         button.setBackgroundImage(buttonImage, forState: UIControlState.Normal)
+         button.setBackgroundImage(buttonImageHighlighted, forState: UIControlState.Highlighted)
+         
+         let heightDifference:CGFloat = buttonImage.size.height - self.tabBar.frame.size.height;
+         if (heightDifference < 0) {
+         button.center = self.tabBar.center;
+         } else {
+         var center: CGPoint = self.tabBar.center;
+         center.y = center.y - heightDifference/2.0;
+         button.center = center;
+         }
+         
+         
+         self.view.addSubview(button)
+         */
+        
+        //tmpCenterUploadBtn.isOpaque = true
+        
+        
+        //self.view.addSubview(tmpCenterUploadBtn)
+        //self.view.bringSubview(toFront: tmpCenterUploadBtn)
+        //self.view.layoutIfNeeded()
+        //test test test test test test test test
+ 
+        
         return self.scrollView
     }
     
@@ -279,7 +351,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     playBtn!.setTitle("Play", for: UIControlState.normal)
                     playBtn!.tintColor = UIColor.black
                     playBtn!.addTarget(self, action: #selector(playBtnPressed(_:)), for: .touchUpInside)
-                
+                    
                     vidPlayerViewController.player = vidPlayer
                     vidPlayerViewController.entersFullScreenWhenPlaybackBegins = false
                     vidPlayerViewController.showsPlaybackControls = true
@@ -290,12 +362,12 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     videoView.frame.size = self.imgView.frame.size
                     
                     /*
-                    if let vidPlayer = vidPlayerViewController.player {
-                        self.scrollView.isHidden = true
-                        
-                        // self.view.addSubview(videoView)
-                    }
-                    */
+                     if let vidPlayer = vidPlayerViewController.player {
+                     self.scrollView.isHidden = true
+                     
+                     // self.view.addSubview(videoView)
+                     }
+                     */
                     
                     vidPlayer.playImmediately(atRate: 1.0)
                     self.view.addSubview(videoView)

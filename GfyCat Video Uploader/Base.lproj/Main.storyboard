@@ -32,9 +32,7 @@
                             <outlet property="delegate" destination="sh1-ui-f9b" id="kOy-4S-aVr"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-video-trimming-50" id="JZS-jL-J9y">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Editor" image="icons8-video-trimming-50" id="JZS-jL-J9y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEi-dj-19M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,9 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-upload-to-the-cloud-100" selectedImage="icons8-upload-to-the-cloud-100" id="acW-dT-cKf">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Upload" image="icons8-upload-to-the-cloud-100" selectedImage="icons8-upload-to-the-cloud-100" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="imgView" destination="W23-e2-9s1" id="BQh-DF-q8h"/>
                         <outlet property="mainView" destination="KQZ-1w-vlD" id="gYF-et-jji"/>
@@ -152,13 +148,11 @@
                             <outlet property="delegate" destination="q2e-jr-lK4" id="3Nx-36-mBQ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-automatic-50" id="KAq-Iw-d8I">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-50" id="KAq-Iw-d8I"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scR-oE-tQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-627" y="1400"/>
+            <point key="canvasLocation" x="-996" y="1189"/>
         </scene>
         <!--File Manager-->
         <scene sceneID="wg7-f3-ORb">
@@ -209,13 +203,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-pictures-folder-50" id="cPa-gy-q4n">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="My Gifs" image="folderIcon2.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="882" y="517"/>
         </scene>
         <!--WebViewController-->
         <scene sceneID="Wbj-00-nsD">
@@ -243,8 +235,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wPM-aA-PnA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="icons8-safari-50" id="5yP-TQ-mne">
-                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
+                    <tabBarItem key="tabBarItem" title="Browser" image="icons8-safari-50" id="5yP-TQ-mne">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -253,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtc-is-xCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.60000000000002" y="1391.1544227886059"/>
+            <point key="canvasLocation" x="33" y="1121"/>
         </scene>
         <!--TabBarViewController-->
         <scene sceneID="yl2-sM-qoP">
@@ -263,6 +254,9 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.75760510491710065" blue="0.85098039215686272" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
@@ -274,14 +268,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-892" y="-17"/>
+            <point key="canvasLocation" x="-1086" y="-133"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-automatic-50" width="50" height="50"/>
-        <image name="icons8-pictures-folder-50" width="50" height="50"/>
-        <image name="icons8-safari-50" width="50" height="50"/>
+        <image name="folderIcon2.png" width="25" height="25"/>
+        <image name="icons8-safari-50" width="25" height="25"/>
+        <image name="icons8-settings-50" width="25" height="25"/>
         <image name="icons8-upload-to-the-cloud-100" width="50" height="50"/>
-        <image name="icons8-video-trimming-50" width="50" height="50"/>
+        <image name="icons8-video-trimming-50" width="25" height="25"/>
     </resources>
 </document>

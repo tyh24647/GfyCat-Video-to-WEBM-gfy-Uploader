@@ -14,6 +14,8 @@
 		1A7DC7CC1FE421D5009F834E /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */; };
 		1A7DC7CF1FE423BE009F834E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */; };
 		1A7DC7D01FE423BE009F834E /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */; };
+		1A91F4E91FE4DEB0002F0E6E /* folderIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A91F4E81FE4DEB0002F0E6E /* folderIcon2.png */; };
+		1A91F4EB1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A91F4EA1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png */; };
 		1ABBF9921FE33E2E0018769F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9911FE33E2E0018769F /* AppDelegate.swift */; };
 		1ABBF9941FE33E2E0018769F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9931FE33E2E0018769F /* UploadViewController.swift */; };
 		1ABBF9961FE33E2E0018769F /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */; };
@@ -49,6 +51,8 @@
 		1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
 		1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		1A91F4E81FE4DEB0002F0E6E /* folderIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folderIcon2.png; path = "Assets.xcassets/icons8-pictures-folder-50.imageset/folderIcon2.png"; sourceTree = "<group>"; };
+		1A91F4EA1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-upload-to-the-cloud-500.png"; path = "Assets.xcassets/icons8-upload-to-the-cloud-100.imageset/icons8-upload-to-the-cloud-500.png"; sourceTree = "<group>"; };
 		1ABBF98E1FE33E2E0018769F /* GfyCat Video Uploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GfyCat Video Uploader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABBF9911FE33E2E0018769F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABBF9931FE33E2E0018769F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */,
 				1AF269CD1FE3F0B60093C568 /* WebViewController.swift */,
 				1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */,
+				1A91F4E81FE4DEB0002F0E6E /* folderIcon2.png */,
+				1A91F4EA1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -228,7 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7DC7D01FE423BE009F834E /* SettingsTableViewCell.xib in Resources */,
+				1A91F4E91FE4DEB0002F0E6E /* folderIcon2.png in Resources */,
 				1ABBF99E1FE33E2E0018769F /* LaunchScreen.storyboard in Resources */,
+				1A91F4EB1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png in Resources */,
 				1A7DC7CC1FE421D5009F834E /* FileTableViewCell.xib in Resources */,
 				1ABBF99B1FE33E2E0018769F /* Assets.xcassets in Resources */,
 				1ABBF9991FE33E2E0018769F /* Main.storyboard in Resources */,
