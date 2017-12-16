@@ -325,9 +325,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.selectedVideoURL = videoURL
                 
                 if !videoURL.relativeString.isEmpty {
-                    vidPlayerItem = AVPlayerItem(url: videoURL)
-                    vidPlayer = AVPlayer(playerItem: vidPlayerItem)
-                    let vidPlayerLayer = AVPlayerLayer(player: vidPlayer)
+                    self.vidPlayerItem = AVPlayerItem(url: videoURL)
+                    self.vidPlayer = AVPlayer(playerItem: self.vidPlayerItem)
+                    let vidPlayerLayer = AVPlayerLayer(player: self.vidPlayer)
                     let vidPlayerViewController = AVPlayerViewController()
                     
                     vidPlayerLayer.frame = CGRect(
@@ -337,17 +337,16 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                         height: 50
                     )
                     
-                    playBtn = UIButton(type: UIButtonType.system) 
-                    let xPos:CGFloat = 50
-                    let yPos:CGFloat = 100
-                    let buttonWidth:CGFloat = 150
-                    let buttonHeight:CGFloat = 45
+                    playBtn = UIButton(type: UIButtonType.system)
+                    if let tmpImg = UIImage(named: "icons8-play-50.png") {
+                        self.playBtn.imageView?.image = tmpImg
+                    }
                     
                     playBtn.frame = CGRect(
-                        x: xPos,
-                        y: yPos,
-                        width: buttonWidth,
-                        height: buttonHeight
+                        x: vidPlayerViewController.videoBounds.width / 2,
+                        y: vidPlayerViewController.videoBounds.height / 2,
+                        width: (self.playBtn.imageView!.image?.size.width)!,
+                        height: (self.playBtn.imageView!.image?.size.height)!
                     )
                     
                     playBtn.backgroundColor = .clear
