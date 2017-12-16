@@ -80,7 +80,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.view.layoutIfNeeded()
         }
         
-        return hasTabBar ? tabBar : super.tabBarController?.tabBar
+        return super.tabBarController?.tabBar
     }
     
     

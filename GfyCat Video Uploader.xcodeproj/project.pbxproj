@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */; };
+		1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */; };
 		1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */; };
 		1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */; };
 		1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */; };
@@ -44,6 +46,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
+		1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		1A3ACAA41FE503D700179D98 /* GfyCat Video Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GfyCat Video Uploader.entitlements"; sourceTree = "<group>"; };
 		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
 		1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A3ACA9E1FE4FA0E00179D98 /* Functors */ = {
+			isa = PBXGroup;
+			children = (
+				1A3ACAA11FE4FA4D00179D98 /* JSONSerialization */,
+				1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */,
+			);
+			name = Functors;
+			sourceTree = "<group>";
+		};
+		1A3ACAA11FE4FA4D00179D98 /* JSONSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */,
+			);
+			name = JSONSerialization;
+			sourceTree = "<group>";
+		};
 		1A7DC7C01FE415F7009F834E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +150,7 @@
 		1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */ = {
 			isa = PBXGroup;
 			children = (
+				1A3ACAA41FE503D700179D98 /* GfyCat Video Uploader.entitlements */,
 				1ABBF9F11FE3B6400018769F /* Constants and Defaults */,
 				1ABBF9A91FE3504C0018769F /* Objects */,
 				1A7DC7C01FE415F7009F834E /* Views */,
@@ -159,6 +182,7 @@
 		1ABBF9A91FE3504C0018769F /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				1A3ACA9E1FE4FA0E00179D98 /* Functors */,
 				1ABBF9A51FE34E480018769F /* WebRequestObj.swift */,
 			);
 			name = Objects;
@@ -207,6 +231,20 @@
 					1ABBF98D1FE33E2E0018769F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -260,6 +298,8 @@
 				1ABBF9961FE33E2E0018769F /* FileManagerViewController.swift in Sources */,
 				1ABBF9921FE33E2E0018769F /* AppDelegate.swift in Sources */,
 				1ABBF9F31FE3B6900018769F /* MediaTypeDefaults.swift in Sources */,
+				1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */,
+				1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */,
 				1AF269CC1FE3EEFE0093C568 /* MyProjectsViewController.swift in Sources */,
 				1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */,
 				1AF269CA1FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift in Sources */,
@@ -406,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -424,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
