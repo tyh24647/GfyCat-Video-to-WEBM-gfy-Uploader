@@ -43,15 +43,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     ///
     /// - Returns: The updated tab bar, if present
     @discardableResult func configureTabBarExtras() -> UITabBar! {
-        var hasTabBar = false
-        
-        // add subtle button under tab bar
         let tmpBtn = UIButton(type: .custom)
         tmpBtn.backgroundColor = .white
         tmpBtn.isOpaque = true
         
         if let tabBar = self.tabBarController?.tabBar {
-            hasTabBar = true
             let btnImg = UIImage(named: "Image")!   // TODO - change to a constant and make sure image is part of build target
             
             tmpBtn.frame = CGRect(
@@ -338,17 +334,22 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     
                     //let vidPlayerViewController = AVPlayerViewController()
                     
-                    playBtn = UIButton(type: UIButtonType.system) as UIButton
+                    playBtn = UIButton(type: UIButtonType.system) 
                     let xPos:CGFloat = 50
                     let yPos:CGFloat = 100
                     let buttonWidth:CGFloat = 150
                     let buttonHeight:CGFloat = 45
                     
-                    playBtn!.frame = CGRect(x:xPos, y:yPos, width:buttonWidth, height:buttonHeight)
-                    playBtn!.backgroundColor = UIColor.lightGray
-                    playBtn!.setTitle("Play", for: UIControlState.normal)
-                    playBtn!.tintColor = UIColor.black
-                    playBtn!.addTarget(self, action: #selector(playBtnPressed(_:)), for: .touchUpInside)
+                    playBtn.frame = CGRect(x:xPos, y:yPos, width:buttonWidth, height:buttonHeight)
+                    playBtn.backgroundColor = .clear
+                    //playBtn!.backgroundColor = UIColor.lightGray
+                    //playBtn!.setTitle("Play", for: UIControlState.normal)
+                    playBtn.tintColor = UIColor.black
+                    
+                    playBtn.addTarget(self,
+                        action: #selector(playBtnPressed(_:)),
+                        for: .touchUpInside
+                    )
                     
                     vidPlayerViewController.player = vidPlayer
                     vidPlayerViewController.entersFullScreenWhenPlaybackBegins = false
@@ -357,6 +358,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     let videoView: UIView = vidPlayerViewController.view
                     //videoView.frame = scrollView.frame
                     //videoView.frame.size = CGSize(width: self.imgView.frame.width, height: (vidPlayer.currentItem?.presentationSize.height)!)
+                    videoView.contentMode = .scaleAspectFit
                     videoView.frame.size = self.imgView.frame.size
                     
                     /*
@@ -368,6 +370,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                      */
                     
                     vidPlayer.playImmediately(atRate: 1.0)
+                    
+                    // add observer to repeat the selected video if playing
+                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.vidPlayer.currentItem, queue: .main) { _ in
+                        self.vidPlayer?.seek(to: kCMTimeZero)
+                        self.vidPlayer?.play()
+                    }
+                    
                     self.view.addSubview(videoView)
                     self.view.addSubview(playBtn)
                 }
