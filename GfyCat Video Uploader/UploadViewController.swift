@@ -345,8 +345,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     playBtn.frame = CGRect(
                         x: vidPlayerViewController.videoBounds.width / 2,
                         y: vidPlayerViewController.videoBounds.height / 2,
-                        width: (self.playBtn.imageView!.image?.size.width)!,
-                        height: (self.playBtn.imageView!.image?.size.height)!
+                        width: 17,
+                        height: 7
                     )
                     
                     playBtn.backgroundColor = .clear

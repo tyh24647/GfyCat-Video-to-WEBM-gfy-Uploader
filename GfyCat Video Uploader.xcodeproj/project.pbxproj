@@ -30,7 +30,6 @@
 		1AF269CA1FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */; };
 		1AF269CC1FE3EEFE0093C568 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */; };
 		1AF269CE1FE3F0B60093C568 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269CD1FE3F0B60093C568 /* WebViewController.swift */; };
-		65AC132471279224C7809537 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC9852878D2AC6FA9A301CE /* Pods_GfyCat_Video_Uploader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,10 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		080FD511DE7B08503CDEA7C5 /* Pods-GfyCat Video Uploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat Video Uploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader.release.xcconfig"; sourceTree = "<group>"; };
 		1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
-		1A3ACAA41FE503D700179D98 /* GfyCat Video Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GfyCat Video Uploader.entitlements"; sourceTree = "<group>"; };
 		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
 		1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +71,6 @@
 		1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		1AF269CD1FE3F0B60093C568 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		399BE07314D3BE47F6269900 /* Pods-GfyCat Video Uploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat Video Uploader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader.debug.xcconfig"; sourceTree = "<group>"; };
-		EAC9852878D2AC6FA9A301CE /* Pods_GfyCat_Video_Uploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GfyCat_Video_Uploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65AC132471279224C7809537 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +135,6 @@
 			children = (
 				1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */,
 				1ABBF98F1FE33E2E0018769F /* Products */,
-				AB88F0F797C252CEE72CD52D /* Pods */,
-				499748EFFB2242DDB6B985BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,7 +149,6 @@
 		1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */ = {
 			isa = PBXGroup;
 			children = (
-				1A3ACAA41FE503D700179D98 /* GfyCat Video Uploader.entitlements */,
 				1ABBF9F11FE3B6400018769F /* Constants and Defaults */,
 				1ABBF9A91FE3504C0018769F /* Objects */,
 				1A7DC7C01FE415F7009F834E /* Views */,
@@ -202,23 +193,6 @@
 				1AF269C71FE3D7890093C568 /* ViewConstants.swift */,
 			);
 			name = "Constants and Defaults";
-			sourceTree = "<group>";
-		};
-		499748EFFB2242DDB6B985BE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EAC9852878D2AC6FA9A301CE /* Pods_GfyCat_Video_Uploader.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AB88F0F797C252CEE72CD52D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				399BE07314D3BE47F6269900 /* Pods-GfyCat Video Uploader.debug.xcconfig */,
-				080FD511DE7B08503CDEA7C5 /* Pods-GfyCat Video Uploader.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +240,7 @@
 								enabled = 1;
 							};
 							com.apple.DataProtection = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Keychain = {
 								enabled = 1;
@@ -500,6 +474,7 @@
 				DEVELOPMENT_TEAM = ZM57TK6EDW;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -519,7 +494,6 @@
 		};
 		1ABBF9A31FE33E2E0018769F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 399BE07314D3BE47F6269900 /* Pods-GfyCat Video Uploader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
@@ -539,7 +513,6 @@
 		};
 		1ABBF9A41FE33E2E0018769F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 080FD511DE7B08503CDEA7C5 /* Pods-GfyCat Video Uploader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
