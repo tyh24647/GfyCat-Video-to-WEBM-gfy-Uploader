@@ -10,7 +10,6 @@ import UIKit
 import AVKit
 import CoreVideo
 
-
 /// FirstViewController displays the view controller allowing the user to select and upload
 /// media to http://online-convert.com/ through the use of their photo library or cloud drive(s)
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
@@ -114,9 +113,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         self.imgView.contentMode = .scaleAspectFill
-        
-        //self.imgView.contentMode = UIViewContentMode.scaleAspectFill
-        self.imgView.semanticContentAttribute = UISemanticContentAttribute.playback
+        self.imgView.semanticContentAttribute = .playback
         
         updateImgView()
         
@@ -232,7 +229,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             )
         } else {
             if self.selectedImg != nil {
-                
                 return setImgViewImg(withIdentifier: newImg.accessibilityIdentifier)
             }
         }
@@ -274,7 +270,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         pickerController.delegate = self
         pickerController.allowsEditing = true
         pickerController.sourceType = .photoLibrary
-        pickerController.mediaTypes = [ "public.image", "public.movie" ]
+        pickerController.mediaTypes = [ "public.movie" ]    // disable image combination for now--only upload gfy files for mov or mp4 files
         self.present(pickerController, animated: true, completion: nil)
     }
     
