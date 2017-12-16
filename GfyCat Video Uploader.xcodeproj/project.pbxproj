@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */; };
 		1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */; };
+		1A6050BA1FE52B4C00F0A55B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6050B91FE52B4C00F0A55B /* Alamofire.framework */; };
+		1A6050BB1FE52B4C00F0A55B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6050B91FE52B4C00F0A55B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */; };
 		1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */; };
 		1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */; };
@@ -34,6 +36,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1A6050B51FE52A6C00F0A55B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1A6050BB1FE52B4C00F0A55B /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1ABBF9CE1FE3B04B0018769F /* Embed PlugIns */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,6 +62,7 @@
 /* Begin PBXFileReference section */
 		1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		1A6050B91FE52B4C00F0A55B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
 		1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3639F8898A8C00AE5D754A6 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */,
+				1A6050BA1FE52B4C00F0A55B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +162,7 @@
 		1ABBF9851FE33E2E0018769F = {
 			isa = PBXGroup;
 			children = (
+				1A6050B91FE52B4C00F0A55B /* Alamofire.framework */,
 				1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */,
 				1ABBF98F1FE33E2E0018769F /* Products */,
 				0B671863AF70EF185586703D /* Pods */,
@@ -233,6 +249,7 @@
 				1ABBF9CE1FE3B04B0018769F /* Embed PlugIns */,
 				44D05CD47D6C5633BA830EAB /* [CP] Embed Pods Frameworks */,
 				5461FF0610D2453D6220D63E /* [CP] Copy Pods Resources */,
+				1A6050B51FE52A6C00F0A55B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
