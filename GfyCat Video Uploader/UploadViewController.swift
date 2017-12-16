@@ -63,7 +63,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             )
             
             let heightDifference = btnImg.size.height - tabBar.frame.size.height
-            //let heightDifference = btnImg.size.height - self.tabBarController!.tabBar.frame.size.height
+            
             if heightDifference < 0 {
                 tmpBtn.center = tabBar.center
             } else {
@@ -190,24 +190,30 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                 )
             }
             
-            //self.imgView.image = tmpImg
             self.selectedImg = tmpImg
         } else {
             self.errMsg = "ERROR: Unable to assign image to selection"
         }
         
         if self.errMsg.count > 0 && !self.errMsg.isEmpty {
-            print(self.errMsg)
-            print("Skipping procedure")
+            #if DEBUG
+                print(self.errMsg)
+                print("Skipping procedure")
+            #endif
         }
         
-        print("Resizing image view frame...")
+        #if DEBUG
+            print("Resizing image view frame...")
+        #endif
         self.imgView.frame.size = tmpImgContainerView.frame.size
-        
-        print("Image frame size changes applied successfully")
-        print("Reloading input views...")
+        #if DEBUG
+            print("Image frame size changes applied successfully")
+            print("Reloading input views...")
+        #endif
         self.imgView.reloadInputViews()
-        print("Image view changes applied successfully")
+        #if DEBUG
+            print("Image view changes applied successfully")
+        #endif
     }
     
     
@@ -323,16 +329,17 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.selectedVideoURL = videoURL
                 
                 if !videoURL.relativeString.isEmpty {
-                    //self.imgView.isHidden = true
                     vidPlayerItem = AVPlayerItem(url: videoURL)
                     vidPlayer = AVPlayer(playerItem: vidPlayerItem)
                     let vidPlayerLayer = AVPlayerLayer(player: vidPlayer)
                     let vidPlayerViewController = AVPlayerViewController()
                     
-                    // test test test test test test test
-                    vidPlayerLayer.frame = CGRect(x:0, y:0, width:10, height:50)
-                    
-                    //let vidPlayerViewController = AVPlayerViewController()
+                    vidPlayerLayer.frame = CGRect(
+                        x: 0,
+                        y: 0,
+                        width: 10,
+                        height: 50
+                    )
                     
                     playBtn = UIButton(type: UIButtonType.system) 
                     let xPos:CGFloat = 50
@@ -340,13 +347,18 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     let buttonWidth:CGFloat = 150
                     let buttonHeight:CGFloat = 45
                     
-                    playBtn.frame = CGRect(x:xPos, y:yPos, width:buttonWidth, height:buttonHeight)
-                    playBtn.backgroundColor = .clear
-                    //playBtn!.backgroundColor = UIColor.lightGray
-                    //playBtn!.setTitle("Play", for: UIControlState.normal)
-                    playBtn.tintColor = UIColor.black
+                    playBtn.frame = CGRect(
+                        x: xPos,
+                        y: yPos,
+                        width: buttonWidth,
+                        height: buttonHeight
+                    )
                     
-                    playBtn.addTarget(self,
+                    playBtn.backgroundColor = .clear
+                    playBtn.tintColor = .black
+                    
+                    playBtn.addTarget(
+                        self,
                         action: #selector(playBtnPressed(_:)),
                         for: .touchUpInside
                     )
@@ -356,18 +368,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     vidPlayerViewController.showsPlaybackControls = true
                     
                     let videoView: UIView = vidPlayerViewController.view
-                    //videoView.frame = scrollView.frame
-                    //videoView.frame.size = CGSize(width: self.imgView.frame.width, height: (vidPlayer.currentItem?.presentationSize.height)!)
                     videoView.contentMode = .scaleAspectFit
                     videoView.frame.size = self.imgView.frame.size
-                    
-                    /*
-                     if let vidPlayer = vidPlayerViewController.player {
-                     self.scrollView.isHidden = true
-                     
-                     // self.view.addSubview(videoView)
-                     }
-                     */
                     
                     vidPlayer.playImmediately(atRate: 1.0)
                     
