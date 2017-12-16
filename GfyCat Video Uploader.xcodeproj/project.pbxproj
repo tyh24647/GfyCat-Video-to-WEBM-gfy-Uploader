@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */; };
 		1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */; };
-		1A6050BA1FE52B4C00F0A55B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6050B91FE52B4C00F0A55B /* Alamofire.framework */; };
-		1A6050BB1FE52B4C00F0A55B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6050B91FE52B4C00F0A55B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */; };
 		1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */; };
 		1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */; };
@@ -35,34 +33,10 @@
 		E3639F8898A8C00AE5D754A6 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D7948BCDC4E2E3DC0ADE9 /* Pods_GfyCat_Video_Uploader.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1A6050B51FE52A6C00F0A55B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1A6050BB1FE52B4C00F0A55B /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1ABBF9CE1FE3B04B0018769F /* Embed PlugIns */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-			);
-			name = "Embed PlugIns";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
-		1A6050B91FE52B4C00F0A55B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A6050C81FE55B5200F0A55B /* GfyCat Video Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GfyCat Video Uploader.entitlements"; sourceTree = "<group>"; };
 		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
 		1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +51,7 @@
 		1ABBF9931FE33E2E0018769F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
 		1ABBF9981FE33E2E0018769F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1ABBF99A1FE33E2E0018769F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ABBF99A1FE33E2E0018769F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../../../Xcode Projects/GfyCat Video Uploader/GfyCat Video Uploader/Assets.xcassets"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABBF99D1FE33E2E0018769F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ABBF99F1FE33E2E0018769F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ABBF9A51FE34E480018769F /* WebRequestObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestObj.swift; sourceTree = "<group>"; };
@@ -97,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3639F8898A8C00AE5D754A6 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */,
-				1A6050BA1FE52B4C00F0A55B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +135,6 @@
 		1ABBF9851FE33E2E0018769F = {
 			isa = PBXGroup;
 			children = (
-				1A6050B91FE52B4C00F0A55B /* Alamofire.framework */,
 				1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */,
 				1ABBF98F1FE33E2E0018769F /* Products */,
 				0B671863AF70EF185586703D /* Pods */,
@@ -181,13 +153,14 @@
 		1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */ = {
 			isa = PBXGroup;
 			children = (
+				1A6050C81FE55B5200F0A55B /* GfyCat Video Uploader.entitlements */,
 				1ABBF9F11FE3B6400018769F /* Constants and Defaults */,
 				1ABBF9A91FE3504C0018769F /* Objects */,
 				1A7DC7C01FE415F7009F834E /* Views */,
 				1ABBF9A71FE34FEC0018769F /* View Controllers */,
 				1ABBF99A1FE33E2E0018769F /* Assets.xcassets */,
-				1ABBF99F1FE33E2E0018769F /* Info.plist */,
 				1ABBF9911FE33E2E0018769F /* AppDelegate.swift */,
+				1ABBF99F1FE33E2E0018769F /* Info.plist */,
 				1ABBF9971FE33E2E0018769F /* Main.storyboard */,
 				1ABBF99C1FE33E2E0018769F /* LaunchScreen.storyboard */,
 			);
@@ -246,10 +219,8 @@
 				1ABBF98A1FE33E2E0018769F /* Sources */,
 				1ABBF98B1FE33E2E0018769F /* Frameworks */,
 				1ABBF98C1FE33E2E0018769F /* Resources */,
-				1ABBF9CE1FE3B04B0018769F /* Embed PlugIns */,
 				44D05CD47D6C5633BA830EAB /* [CP] Embed Pods Frameworks */,
 				5461FF0610D2453D6220D63E /* [CP] Copy Pods Resources */,
-				1A6050B51FE52A6C00F0A55B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -422,7 +393,7 @@
 		1ABBF9A01FE33E2E0018769F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -448,16 +419,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tyh24647@gmail.com (3ZFSS4SN58)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = ZM57TK6EDW;
+				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -469,7 +440,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = Untitled.p12;
@@ -482,7 +452,7 @@
 		1ABBF9A11FE33E2E0018769F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -508,23 +478,22 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tyh24647@gmail.com (3ZFSS4SN58)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = ZM57TK6EDW;
+				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE_SPECIFIER = Untitled.p12;
 				SDKROOT = iphoneos;
@@ -544,6 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tylh24647.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tylh24647.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";

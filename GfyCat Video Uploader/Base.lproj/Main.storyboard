@@ -32,7 +32,9 @@
                             <outlet property="delegate" destination="sh1-ui-f9b" id="kOy-4S-aVr"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Editor" image="icons8-video-trimming-50" id="JZS-jL-J9y"/>
+                    <tabBarItem key="tabBarItem" title="Editor" image="icons8-video-trimming-50" id="JZS-jL-J9y">
+                        <color key="badgeColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEi-dj-19M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,30 +49,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Upload" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="132" y="312" width="112" height="43"/>
+                                <rect key="frame" x="132" y="195" width="112" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert to .gfy and Upload to GfyCat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="54" y="363" width="268" height="17"/>
+                                <rect key="frame" x="54" y="246" width="268" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEs-un-B1h">
-                                <rect key="frame" x="82" y="406" width="201" height="30"/>
+                                <rect key="frame" x="51" y="289" width="274" height="30"/>
                                 <state key="normal" title="Select a file to upload..."/>
                                 <connections>
                                     <action selector="selectFileBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="JTs-kp-KWn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-rT-Gbr">
-                                <rect key="frame" x="158" y="444" width="50" height="30"/>
-                                <state key="normal" title="Upload"/>
-                                <connections>
-                                    <action selector="uploadBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="PPP-Eh-35G"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-e6-2cN">
@@ -81,34 +76,48 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="W23-e2-9s1" firstAttribute="centerY" secondItem="cQ2-e6-2cN" secondAttribute="centerY" id="Ff2-YK-BeP"/>
-                                    <constraint firstItem="W23-e2-9s1" firstAttribute="top" secondItem="cQ2-e6-2cN" secondAttribute="top" id="Ox5-pa-gQy"/>
-                                    <constraint firstAttribute="trailing" secondItem="W23-e2-9s1" secondAttribute="trailing" id="ReT-9Y-1ht"/>
-                                    <constraint firstItem="W23-e2-9s1" firstAttribute="leading" secondItem="cQ2-e6-2cN" secondAttribute="leading" id="iWX-mK-Z7z"/>
-                                    <constraint firstAttribute="bottom" secondItem="W23-e2-9s1" secondAttribute="bottom" id="mrv-zw-ymo"/>
-                                    <constraint firstItem="W23-e2-9s1" firstAttribute="centerX" secondItem="cQ2-e6-2cN" secondAttribute="centerX" id="pbu-C3-M5j"/>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="top" secondItem="cQ2-e6-2cN" secondAttribute="top" id="7Wp-x4-RGJ"/>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="centerY" secondItem="cQ2-e6-2cN" secondAttribute="centerY" id="BSY-lF-lvX"/>
+                                    <constraint firstAttribute="bottom" secondItem="W23-e2-9s1" secondAttribute="bottom" id="CKB-IA-Vn8"/>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="leading" secondItem="cQ2-e6-2cN" secondAttribute="leading" id="GLx-fq-cuF"/>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="centerX" secondItem="cQ2-e6-2cN" secondAttribute="centerX" id="cFR-kT-pZ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="W23-e2-9s1" secondAttribute="trailing" id="p57-xC-FQI"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="ejc-fP-zXy"/>
                                 </connections>
                             </scrollView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-rT-Gbr">
+                                <rect key="frame" x="102" y="280" width="170" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="3jx-sw-Hch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Convert &amp; Upload"/>
+                                <connections>
+                                    <action selector="uploadBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="PPP-Eh-35G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cQ2-e6-2cN" secondAttribute="trailing" id="2uQ-8d-Buw"/>
-                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="86R-lW-ZH9"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="54" id="8DB-ME-BdU"/>
-                            <constraint firstItem="LEs-un-B1h" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="26" id="8ks-G6-XUv"/>
-                            <constraint firstItem="LEs-un-B1h" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="82" id="91i-Nv-jZm"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="AY3-gv-qHD"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="A5M-7J-77L" secondAttribute="centerX" id="N7m-OF-to8"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="cQ2-e6-2cN" secondAttribute="bottom" constant="34" id="ZWd-SZ-OEZ"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="bhX-4Z-3i4"/>
-                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="top" secondItem="LEs-un-B1h" secondAttribute="bottom" constant="8" symbolic="YES" id="eUy-ex-Ihd"/>
-                            <constraint firstItem="LEs-un-B1h" firstAttribute="centerX" secondItem="Es8-rT-Gbr" secondAttribute="centerX" id="pHq-uW-XTd"/>
-                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="pz5-Rj-bJd"/>
-                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="s9i-gF-S9h"/>
-                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="158" id="vA6-cf-suO"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="54" id="91B-Iq-Zi9"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="G32-Rw-icw"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="Klk-FE-Xve"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Nqh-Vl-GXF"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-117" id="OEm-i3-tMf"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="A5M-7J-77L" secondAttribute="centerX" id="Rcm-3T-1kN"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="cQ2-e6-2cN" secondAttribute="bottom" constant="-83" id="Xpr-op-E3e"/>
+                            <constraint firstItem="LEs-un-B1h" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="26" id="fLB-BM-nqu"/>
+                            <constraint firstItem="LEs-un-B1h" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="hRO-D0-577"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="oJM-rX-igt"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="pYE-u1-ihl"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="top" secondItem="LEs-un-B1h" secondAttribute="bottom" constant="-39" id="sdV-gP-82m"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="centerX" secondItem="cQ2-e6-2cN" secondAttribute="centerX" id="wge-Bl-tuW"/>
+                            <constraint firstAttribute="trailing" secondItem="cQ2-e6-2cN" secondAttribute="trailing" id="wv3-cE-qQs"/>
+                            <constraint firstItem="LEs-un-B1h" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="51" id="wxX-m5-Dp4"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="yec-ba-tyS"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="102" id="zRu-Ww-ay8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -179,7 +188,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xY0-BT-7Is" customClass="FileCell" customModule="GfyCat_Video_Uploader" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xY0-BT-7Is">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xY0-BT-7Is" id="qtM-2h-r32">
@@ -207,18 +216,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="517"/>
+            <point key="canvasLocation" x="1220" y="516.79160419790105"/>
         </scene>
         <!--WebViewController-->
         <scene sceneID="Wbj-00-nsD">
             <objects>
                 <viewController title="WebViewController" id="E71-Gc-a3z" customClass="WebViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dd9-Wn-qnQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meM-6h-OUm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -235,16 +244,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wPM-aA-PnA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Browser" image="icons8-safari-50" id="5yP-TQ-mne">
-                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Title" id="tpD-aY-IqI"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="meM-6h-OUm" id="QPu-fU-63x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtc-is-xCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="1121"/>
+            <point key="canvasLocation" x="894" y="1289"/>
         </scene>
         <!--TabBarViewController-->
         <scene sceneID="yl2-sM-qoP">
@@ -255,12 +264,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.0" green="0.75760510491710065" blue="0.85098039215686272" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.43822449096970822" blue="0.91903935185185182" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="1" green="1" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="E71-Gc-a3z" kind="relationship" relationship="viewControllers" id="7U4-Rr-Qrh"/>
+                        <segue destination="dtj-cb-O2T" kind="relationship" relationship="viewControllers" id="7U4-Rr-Qrh"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="sh1-ui-f9b" kind="relationship" relationship="viewControllers" id="Hzp-pb-hlO"/>
                         <segue destination="q2e-jr-lK4" kind="relationship" relationship="viewControllers" id="oTS-L5-hY1"/>
@@ -269,6 +278,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1086" y="-133"/>
+        </scene>
+        <!--Browser-->
+        <scene sceneID="BVd-Wj-vP9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dtj-cb-O2T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browser" image="icons8-safari-50" id="5yP-TQ-mne">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L19-9A-4qa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vZw-Q8-sAu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="E71-Gc-a3z" kind="relationship" relationship="rootViewController" id="930-8h-DdM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPc-Ow-3zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="1120.8395802098951"/>
         </scene>
     </scenes>
     <resources>

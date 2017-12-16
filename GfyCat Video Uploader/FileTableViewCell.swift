@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FileCell: UITableViewCell {
+class FileTableViewCell: UITableViewCell {
     override var reuseIdentifier: String? {
         get { return "FileCell" }
     }

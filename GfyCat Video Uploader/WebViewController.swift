@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, UIWebViewDelegate {
+class WebViewController: UIViewController, UIWebViewDelegate, UINavigationBarDelegate {
     @IBOutlet var webView: WKWebView!
     
     var webKitConfigs: WKWebViewConfiguration!

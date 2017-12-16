@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import CoreVideo
+import Alamofire
 
 /// FirstViewController displays the view controller allowing the user to select and upload
 /// media to http://online-convert.com/ through the use of their photo library or cloud drive(s)
@@ -34,6 +35,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         configureImgView()
         configureScrollView()
+        self.playBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        self.playBtn.setTitle("Play", for: .normal)
+        self.playBtn.isHidden = true
+        self.playBtn.isEnabled = false
+        self.selectFileBtn.isHidden = false
+        self.selectFileBtn.isEnabled = true
+        self.uploadBtn.isHidden = true
+        self.uploadBtn.isEnabled = false
         configureTabBarExtras()
     }
     
@@ -94,7 +103,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         self.scrollView.minimumZoomScale = ViewConstants.defaultMinZoomScale
         self.scrollView.maximumZoomScale = ViewConstants.defaultMaxZoomScale
-        
         self.scrollView.contentMode = .scaleToFill
         
         return self.scrollView
@@ -225,7 +233,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let tmpImg: UIImage = newImg {
             success = (
                 !(tmpImg.ciImage == nil && tmpImg.cgImage == nil)
-                    && (tmpImg.accessibilityIdentifier != nil && !tmpImg.debugDescription.isEmpty)
+                    && (tmpImg.accessibilityIdentifier != nil && !(String(describing: tmpImg)).isEmpty)
             )
         } else {
             if self.selectedImg != nil {
@@ -266,11 +274,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func selectFileBtnPressed(_ sender: Any) {
+        //let pickerController = UIDocumentPickerViewController(documentTypes: ["public.movie", "public.video", UIImagePickerControllerPHAsset, UIImagePickerControllerMediaType], in: .import)
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.allowsEditing = true
+        pickerController.videoExportPreset = AVAssetExportPresetHighestQuality
+        pickerController.videoMaximumDuration = 50      // in seconds
         pickerController.sourceType = .photoLibrary
-        pickerController.mediaTypes = [ "public.movie" ]    // disable image combination for now--only upload gfy files for mov or mp4 files
+        pickerController.mediaTypes = [ "public.movie", "public.video" ]    // disable image combination for now--only upload gfy files for mov or mp4 files
         self.present(pickerController, animated: true, completion: nil)
     }
     
@@ -284,6 +295,10 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        self.uploadBtn.isHidden = false
+        self.uploadBtn.isEnabled = true
+        self.selectFileBtn.isHidden = true
+        self.selectFileBtn.isEnabled = false
         
         // determine media type
         if let mediaType = info[UIImagePickerControllerMediaType] as? String {
@@ -303,15 +318,22 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.selectedImg = tmpImg
                     
                     if let tmpImg = self.selectedImg {
-                        print("Applying image selection...")
+                        #if DEBUG
+                            print("Applying image selection...")
+                        #endif
                         self.imgView.image = tmpImg
-                        print("Image selected successfully")
-                        
-                        print("Searching for special image frame size/ratio specifications...")
+                        #if DEBUG
+                            print("Image selected successfully")
+                            print("Searching for special image frame size/ratio specifications...")
+                        #endif
                         if let tmpImgFrame = self.selectedImgFrame {
-                            print("Specifications found.\nApplying frame for selected image")
+                            #if DEBUG
+                                print("Specifications found.\nApplying frame for selected image")
+                            #endif
                             self.imgView.frame = tmpImgFrame
-                            print("Specifications applied successfully")
+                            #if DEBUG
+                                print("Specifications applied successfully")
+                            #endif
                         }
                     }
                     
@@ -323,6 +345,12 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     print("\"Video file selected at location: \"\(videoURL)\"")
                 #endif
                 self.selectedVideoURL = videoURL
+                
+                self.vidPlayerItem = nil
+                self.vidPlayer = nil
+                self.selectedImg = nil
+                self.selectedVideoURL = nil
+                self.selectedImgFrame = nil
                 
                 if !videoURL.relativeString.isEmpty {
                     self.vidPlayerItem = AVPlayerItem(url: videoURL)
@@ -337,22 +365,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                         height: 50
                     )
                     
-                    playBtn = UIButton(type: UIButtonType.system)
-                    if let tmpImg = UIImage(named: "icons8-play-50.png") {
-                        self.playBtn.imageView?.image = tmpImg
+                    if self.playBtn == nil {
+                        self.playBtn = UIButton(type: .custom)
                     }
                     
-                    playBtn.frame = CGRect(
-                        x: vidPlayerViewController.videoBounds.width / 2,
-                        y: vidPlayerViewController.videoBounds.height / 2,
-                        width: 17,
-                        height: 7
-                    )
-                    
-                    playBtn.backgroundColor = .clear
-                    playBtn.tintColor = .black
-                    
-                    playBtn.addTarget(
+                    self.playBtn.addTarget(
                         self,
                         action: #selector(playBtnPressed(_:)),
                         for: .touchUpInside
@@ -366,15 +383,23 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     videoView.contentMode = .scaleAspectFit
                     videoView.frame.size = self.imgView.frame.size
                     
-                    vidPlayer.playImmediately(atRate: 1.0)
-                    
                     // add observer to repeat the selected video if playing
                     NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.vidPlayer.currentItem, queue: .main) { _ in
                         self.vidPlayer?.seek(to: kCMTimeZero)
                         self.vidPlayer?.play()
                     }
                     
-                    self.view.addSubview(videoView)
+                    // add video controller as a child subview
+                    self.addChildViewController(vidPlayerViewController)
+                    self.view.addSubview(vidPlayerViewController.view)
+                    vidPlayerViewController.view.frame = self.imgView.frame
+                    
+                    /*
+                     if vidPlayerViewController.view.bounds == vidPlayerViewController.contentOverlayView!.bounds {
+                     UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                     }
+                     */
+                    
                     self.view.addSubview(playBtn)
                 }
             default:
@@ -429,21 +454,49 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         /*
          TODO: figure out web request to online-convert.com
          */
+        
+        // TEST TEST ETST TEST ETS TEST EST
+        /*
+        Alamofire.request("https://httpbin.org/get").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+         
+        }
+        */
+        
+        Alamofire.request("https://api.gfycat.com/v1/users").responseJSON { response in
+            print("Request: \(String(describing: response.request))")    // original url
+            print("Response: \(String(describing: response.response))")     // http response
+            print("Result: \(response.result)")                     // serialized result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)")  // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
+        
+        
         print("Upload request: \"\(uploadRequestURL)\"")
         
     }
     
     @objc func playBtnPressed(_ sender: UIButton!) {
         #if DEBUG
-            print("Button pressed: \"\(self.playBtn.title(for: .normal).debugDescription)\"")
+            print("Button pressed: \"\(String(describing: self.playBtn.title(for: .normal)))\"")
         #endif
         self.vidPlayer.rate == 0 ? self.vidPlayer.play() : self.vidPlayer.pause()
-        self.playBtn.setTitle(
-            self.vidPlayer.rate != 0 ?
-                ViewConstants.defaultPlayButtonPlayTitle
-                : ViewConstants.defaultPlayButtonPauseTitle,
-            for: .normal
-        )
     }
     
     @discardableResult func playVideo() -> Bool {
@@ -457,10 +510,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             #if DEBUG
                 print("Playing video")
             #endif
-            self.playBtn.setTitle(
-                ViewConstants.defaultPlayButtonPauseTitle,
-                for: .normal
-            )
         }
         
         return operationSuccessful
@@ -477,10 +526,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             #if DEBUG
                 print("Pausing video")
             #endif
-            self.playBtn.setTitle(
-                ViewConstants.defaultPlayButtonPauseTitle,
-                for: .normal
-            )
         }
         
         return operationSuccessful

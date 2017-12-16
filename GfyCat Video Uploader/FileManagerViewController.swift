@@ -10,6 +10,7 @@ import UIKit
 
 class FileManagerViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,10 +22,14 @@ class FileManagerViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var fileCell = FileCell()
+        var fileCell = FileTableViewCell()
         
         
         return fileCell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
 }
 
