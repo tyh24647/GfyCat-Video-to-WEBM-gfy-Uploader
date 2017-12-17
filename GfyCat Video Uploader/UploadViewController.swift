@@ -384,7 +384,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     videoView.frame.size = self.imgView.frame.size
                     
                     // add observer to repeat the selected video if playing
-                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.vidPlayer.currentItem, queue: .main) { _ in
+                    NotificationCenter.default.addObserver(
+                    forName: .AVPlayerItemDidPlayToEndTime,
+                    object: self.vidPlayer.currentItem, queue: .main) { _ in
                         self.vidPlayer?.seek(to: kCMTimeZero)
                         self.vidPlayer?.play()
                     }
@@ -393,13 +395,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.addChildViewController(vidPlayerViewController)
                     self.view.addSubview(vidPlayerViewController.view)
                     vidPlayerViewController.view.frame = self.imgView.frame
-                    
-                    /*
-                     if vidPlayerViewController.view.bounds == vidPlayerViewController.contentOverlayView!.bounds {
-                     UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-                     }
-                     */
-                    
+                
                     self.view.addSubview(playBtn)
                 }
             default:

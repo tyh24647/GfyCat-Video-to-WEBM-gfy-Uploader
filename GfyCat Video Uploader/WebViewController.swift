@@ -35,7 +35,6 @@ class WebViewController: UIViewController, UIWebViewDelegate, UINavigationBarDel
             self.webView = WKWebView(frame: self.view.frame)
         }
         
-        
         self.webView.allowsLinkPreview = true
         self.webView.allowsBackForwardNavigationGestures = true
         self.webView.customUserAgent = "Mozilla"    // TODO maybe change back to mobile safari

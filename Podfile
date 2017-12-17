@@ -10,6 +10,7 @@ platform :ios, '11.0'
   
 target 'GfyCat Video Uploader' do
   pod 'Alamofire', '~>4.5'
+  pod 'GfycatKit'
   # Pods for GfyCat Video Uploader
 
 end

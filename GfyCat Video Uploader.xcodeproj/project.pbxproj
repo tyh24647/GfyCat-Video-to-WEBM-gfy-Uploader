@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */; };
 		1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */; };
+		1A6050CA1FE593AE00F0A55B /* VideoJSONSerializableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */; };
 		1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */; };
 		1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */; };
 		1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */; };
@@ -37,6 +38,7 @@
 		1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
 		1A6050C81FE55B5200F0A55B /* GfyCat Video Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GfyCat Video Uploader.entitlements"; sourceTree = "<group>"; };
+		1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoJSONSerializableObject.swift; sourceTree = "<group>"; };
 		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
 		1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				1A3ACA9E1FE4FA0E00179D98 /* Functors */,
 				1ABBF9A51FE34E480018769F /* WebRequestObj.swift */,
+				1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF269C81FE3D7890093C568 /* ViewConstants.swift in Sources */,
+				1A6050CA1FE593AE00F0A55B /* VideoJSONSerializableObject.swift in Sources */,
 				1A7DC7CB1FE421D5009F834E /* FileTableViewCell.swift in Sources */,
 				1AF269CE1FE3F0B60093C568 /* WebViewController.swift in Sources */,
 				1ABBF9A61FE34E480018769F /* WebRequestObj.swift in Sources */,
