@@ -20,6 +20,10 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>GfycatApiClientId</key>
+	<string>2_sC8pPz</string>
+	<key>GfycatApiClientSecret</key>
+	<string>HSEC0D6fgwXMJonqsDmuwIzaPsQYX3iKk2OSp3RRVce0JS8OBL7xl6r4zHLVZbsj</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>11.0</string>
 	<key>LSRequiresIPhoneOS</key>
