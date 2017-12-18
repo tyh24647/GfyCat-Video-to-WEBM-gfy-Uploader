@@ -21,13 +21,13 @@ Supported file import formats:
   - .avi
   - .gif
   
-File output formats:
+Supported File output formats:
   - .gif
   - .webm (highest quality/lossless, not supported by iOS natively--use the VLC app to view)
   - .mp4
   - .mov
 
-- Video import options - supports the following sources:
+Video import options - supports the following sources:
   - Built-in web browser (prompt for download when valid video is tapped)
   - Camera roll/internal photo albums
   - iCloud Drive
