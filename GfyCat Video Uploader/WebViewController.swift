@@ -44,7 +44,6 @@ class WebViewController: UINavigationController, UIWebViewDelegate, UINavigation
         
         self.webView.load(gfyCatURLRequest)
         
-        
         // set custom configs--can be changed from the user's settings
         wk_allowPictureInPicturePlayback(true)
     }
@@ -65,8 +64,7 @@ class WebViewController: UINavigationController, UIWebViewDelegate, UINavigation
                     height: navBar.frame.size.height / 4
                 )
                 
-                let imageView = UIImageView(image: titleImg)
-                navTitleItemView = imageView
+                navTitleItemView = UIImageView(image: titleImg)
             }
             
             self.navigationItem.titleView = navTitleItemView
