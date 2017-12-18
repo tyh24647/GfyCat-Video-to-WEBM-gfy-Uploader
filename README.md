@@ -1,4 +1,4 @@
-# GfyCat Video-to-WEBM -- Lossless HD .gif and .gfy Creator/Uploader
+# GfyCat Video-to-WEBM -- Lossless HD .gif and .gfy Creator/Uploader for iOS
 Allows for iPhone users to convert video from their photo library or cloud drives to a full-bitrate/lossless HD gif in gfy format
 
 How this is done:
