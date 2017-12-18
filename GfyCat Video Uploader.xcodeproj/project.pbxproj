@@ -134,6 +134,21 @@
 			name = Nibs;
 			sourceTree = "<group>";
 		};
+		1A91E8461FE65B5600164CB8 /* Views To Test */ = {
+			isa = PBXGroup;
+			children = (
+				1A91E8471FE65B5F00164CB8 /* Experimental/other ideas */,
+			);
+			name = "Views To Test";
+			sourceTree = "<group>";
+		};
+		1A91E8471FE65B5F00164CB8 /* Experimental/other ideas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Experimental/other ideas";
+			sourceTree = "<group>";
+		};
 		1ABBF9851FE33E2E0018769F = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +204,7 @@
 			children = (
 				1A3ACA9E1FE4FA0E00179D98 /* Functors */,
 				1ABBF9A51FE34E480018769F /* WebRequestObj.swift */,
+				1A91E8461FE65B5600164CB8 /* Views To Test */,
 				1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */,
 			);
 			name = Objects;

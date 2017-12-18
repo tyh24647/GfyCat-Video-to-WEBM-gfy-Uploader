@@ -9,26 +9,30 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
+    @IBOutlet var mainTabBar: UITabBar!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //self.selectedIndex = 2  // TODO consider changing and make into default
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
- 
-        /*
-        var tabBarItems = self.tabBarController?.toolbarItems
-        for var tBItem! in tabBarItems {
-            
+        
+        // change the color of the non-highlighted UITSabBar text to be less difficult to see
+        
+        //let tabBarItems = self.tabBarController!.tabBar.items
+        let tabBarItems = self.tabBar.items
+        for var tbItem in tabBarItems! {
+            //TODO set disabled color
         }
-        */
         
         self.selectedIndex = 2
+        
+        for _ in self.tabBar.items! {
+            ///if tabBarItem 
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,10 +48,7 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        if segue.destination.view != nil {
+        if segue.destination.view != nil && !segue.identifier!.isEmpty {
             
         } else {
             #if DEBUG

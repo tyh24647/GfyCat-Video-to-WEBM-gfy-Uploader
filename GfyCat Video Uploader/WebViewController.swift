@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, UIWebViewDelegate, UINavigationBarDelegate {
+class WebViewController: UINavigationController, UIWebViewDelegate, UINavigationBarDelegate {
     @IBOutlet var webView: WKWebView!
     
     var webKitConfigs: WKWebViewConfiguration!
@@ -19,8 +19,6 @@ class WebViewController: UIViewController, UIWebViewDelegate, UINavigationBarDel
         
         // do setup before loading the view
         
-        
-        
     }
     
     override func viewDidLoad() {
@@ -28,6 +26,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, UINavigationBarDel
         
         // Do any additional setup after loading the view.
         configureWebView()
+        configureNavBarItems()
     }
     
     func configureWebView() -> Void {
@@ -48,6 +47,31 @@ class WebViewController: UIViewController, UIWebViewDelegate, UINavigationBarDel
         
         // set custom configs--can be changed from the user's settings
         wk_allowPictureInPicturePlayback(true)
+    }
+    
+    func configureNavBarItems() -> Void {
+        let logo = UIImage(named: "IMG_6370")
+        
+        if let titleImg = logo {
+            let navBar = self.navigationController!.navigationBar
+            var navTitleItemView = self.navigationItem.titleView
+            self.navigationItem.titleView = navTitleItemView
+            
+            if self.navigationController != nil {
+                self.navigationController?.navigationBar.items![0].titleView!.frame = CGRect(
+                    x: navBar.center.x,
+                    y: navBar.center.y,
+                    width: navBar.frame.size.width / 4,
+                    height: navBar.frame.size.height / 4
+                )
+                
+                let imageView = UIImageView(image: titleImg)
+                navTitleItemView = imageView
+            }
+            
+            self.navigationItem.titleView = navTitleItemView
+        }
+        
     }
     
     @discardableResult func wk_setImmutableValue(_ value: Any?, forKey key: String?) -> Bool! {

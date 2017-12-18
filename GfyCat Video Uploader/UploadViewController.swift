@@ -19,6 +19,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet var uploadBtn: UIButton!
     @IBOutlet var imgView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet var convertVideoBtn: UIButton!
     
     var vidPlayerItem: AVPlayerItem!
     var vidPlayer: AVPlayer!
@@ -28,21 +29,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     var selectedVideoURL: URL!
     var selectedImgURL: URL!
     var errMsg: String!
-    
+
+    /// Do any additional setup after loading the view, typically from a nib.
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         configureImgView()
         configureScrollView()
-        self.playBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        self.playBtn.setTitle("Play", for: .normal)
-        self.playBtn.isHidden = true
-        self.playBtn.isEnabled = false
-        self.selectFileBtn.isHidden = false
-        self.selectFileBtn.isEnabled = true
-        self.uploadBtn.isHidden = true
-        self.uploadBtn.isEnabled = false
+        configureBtns()
         configureTabBarExtras()
     }
     
@@ -128,6 +122,17 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         return self.imgView
     }
     
+    func configureBtns() -> Void {
+        self.playBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        self.playBtn.setTitle("Play", for: .normal)
+        self.playBtn.isHidden = true
+        self.playBtn.isEnabled = false
+        self.selectFileBtn.isHidden = false
+        self.selectFileBtn.isEnabled = true
+        self.uploadBtn.isHidden = true
+        self.uploadBtn.isEnabled = false
+    }
+    
     
     /// Assigns the specified view to be the primary view in which the
     /// user can use gestures to zoom in/out
@@ -188,7 +193,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             } else {
                 let tmpWidth = tmpImgContainerView.frame.height * imgRatio
                 
-                print("Adjusting image view rect height to fit image ratio...")
+                #if DEBUG
+                    print("Adjusting image view rect height to fit image ratio...")
+                #endif
                 self.imgView.frame.size = CGSize(
                     width: tmpWidth,
                     height: tmpImgContainerView.frame.height
@@ -248,7 +255,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                 file named: \"\(String(describing: newImg.accessibilityIdentifier))\"
                 """
                 ) as String
-            
             print(pErr)
             print("Skipping procedure")
         }
@@ -274,7 +280,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func selectFileBtnPressed(_ sender: Any) {
-        //let pickerController = UIDocumentPickerViewController(documentTypes: ["public.movie", "public.video", UIImagePickerControllerPHAsset, UIImagePickerControllerMediaType], in: .import)
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.allowsEditing = true
@@ -289,9 +294,12 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         sendImgUploadRequest()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+  
+    
+    @IBAction func convertVideoBtnPressed(_ sender: Any) {
+        if let tmpCvtBtn = self.convertVideoBtn {
+            
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -385,17 +393,17 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     
                     // add observer to repeat the selected video if playing
                     NotificationCenter.default.addObserver(
-                    forName: .AVPlayerItemDidPlayToEndTime,
-                    object: self.vidPlayer.currentItem, queue: .main) { _ in
-                        self.vidPlayer?.seek(to: kCMTimeZero)
-                        self.vidPlayer?.play()
+                        forName: .AVPlayerItemDidPlayToEndTime,
+                        object: self.vidPlayer.currentItem, queue: .main) { _ in
+                            self.vidPlayer?.seek(to: kCMTimeZero)
+                            self.vidPlayer?.play()
                     }
                     
                     // add video controller as a child subview
                     self.addChildViewController(vidPlayerViewController)
                     self.view.addSubview(vidPlayerViewController.view)
                     vidPlayerViewController.view.frame = self.imgView.frame
-                
+                    
                     self.view.addSubview(playBtn)
                 }
             default:
@@ -453,21 +461,21 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         // TEST TEST ETST TEST ETS TEST EST
         /*
-        Alamofire.request("https://httpbin.org/get").responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
-            
-            if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
-            }
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-            }
+         Alamofire.request("https://httpbin.org/get").responseJSON { response in
+         print("Request: \(String(describing: response.request))")   // original url request
+         print("Response: \(String(describing: response.response))") // http url response
+         print("Result: \(response.result)")                         // response serialization result
          
-        }
-        */
+         if let json = response.result.value {
+         print("JSON: \(json)") // serialized json response
+         }
+         
+         if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+         print("Data: \(utf8Text)") // original server data as UTF8 string
+         }
+         
+         }
+         */
         
         Alamofire.request("https://api.gfycat.com/v1/users").responseJSON { response in
             print("Request: \(String(describing: response.request))")    // original url
@@ -525,6 +533,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         return operationSuccessful
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 

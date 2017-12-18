@@ -15,6 +15,8 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Alamofire (4.6.0)
+  - AttributedLabel (1.1.1)
+  - DynamicBlurView (2.0.1)
   - GfycatApiKit (0.0.7):
     - AFNetworking (~> 3.0)
     - UICKeyChainStore (= 2.1.1)
@@ -26,6 +28,19 @@ PODS:
     - YYWebImage
   - GfycatKit/Core (0.0.38):
     - GfycatKit/Browser
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
+  - TableViewDragger (1.0.0)
   - UICKeyChainStore (2.1.1)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
@@ -39,18 +54,26 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - AttributedLabel
+  - DynamicBlurView
   - GfycatKit
+  - MMDrawerController (~> 0.5.7)
+  - TableViewDragger
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AttributedLabel: 95419bcf4f736a154ca1c8e65261cf36d763260e
+  DynamicBlurView: 5e6babd80cc0ddfd3ddfc4f5dacf2fe4181e7c52
   GfycatApiKit: c0146d2e5f42c081e02ea9ac1263aea26afcf634
   GfycatKit: bcc20860c9464d404c89f07913477a778e83b20e
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  TableViewDragger: f9e92e0fd395fb42df73e2eb73bacc19832139bf
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 2957c82f35c880f5d45032a2fa294c89c6f73f6d
+PODFILE CHECKSUM: d6d26a84b5957ebe36b1e24cac94b80e1466f46f
 
 COCOAPODS: 1.2.0
