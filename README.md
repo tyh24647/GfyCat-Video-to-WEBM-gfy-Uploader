@@ -11,6 +11,7 @@ This app provides the full video to .webm conversion done through either the har
 This app also allows the user to edit the video duration and choose the desired section of the video to create a gif from.
 
 Maximum file upload size: 100MB
+
 Maximum video clip duration: 50s
 
 Supported file import formats:
