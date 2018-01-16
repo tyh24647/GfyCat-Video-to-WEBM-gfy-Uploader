@@ -7,25 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */; };
+		1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */; };
+		1A6050CA1FE593AE00F0A55B /* VideoJSONSerializableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */; };
+		1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */; };
+		1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */; };
+		1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */; };
+		1A7DC7CB1FE421D5009F834E /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7C91FE421D5009F834E /* FileTableViewCell.swift */; };
+		1A7DC7CC1FE421D5009F834E /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */; };
+		1A7DC7CF1FE423BE009F834E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */; };
+		1A7DC7D01FE423BE009F834E /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */; };
+		1A91F4E91FE4DEB0002F0E6E /* folderIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A91F4E81FE4DEB0002F0E6E /* folderIcon2.png */; };
+		1A91F4EB1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A91F4EA1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png */; };
 		1ABBF9921FE33E2E0018769F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9911FE33E2E0018769F /* AppDelegate.swift */; };
-		1ABBF9941FE33E2E0018769F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9931FE33E2E0018769F /* FirstViewController.swift */; };
-		1ABBF9961FE33E2E0018769F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9951FE33E2E0018769F /* SecondViewController.swift */; };
+		1ABBF9941FE33E2E0018769F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9931FE33E2E0018769F /* UploadViewController.swift */; };
+		1ABBF9961FE33E2E0018769F /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */; };
 		1ABBF9991FE33E2E0018769F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF9971FE33E2E0018769F /* Main.storyboard */; };
 		1ABBF99B1FE33E2E0018769F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF99A1FE33E2E0018769F /* Assets.xcassets */; };
 		1ABBF99E1FE33E2E0018769F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF99C1FE33E2E0018769F /* LaunchScreen.storyboard */; };
 		1ABBF9A61FE34E480018769F /* WebRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9A51FE34E480018769F /* WebRequestObj.swift */; };
+		1ABBF9F31FE3B6900018769F /* MediaTypeDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9F21FE3B6900018769F /* MediaTypeDefaults.swift */; };
+		1AF269C81FE3D7890093C568 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269C71FE3D7890093C568 /* ViewConstants.swift */; };
+		1AF269CA1FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */; };
+		1AF269CC1FE3EEFE0093C568 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */; };
+		1AF269CE1FE3F0B60093C568 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF269CD1FE3F0B60093C568 /* WebViewController.swift */; };
+		E3639F8898A8C00AE5D754A6 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D7948BCDC4E2E3DC0ADE9 /* Pods_GfyCat_Video_Uploader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
+		1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		1A6050C81FE55B5200F0A55B /* GfyCat Video Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GfyCat Video Uploader.entitlements"; sourceTree = "<group>"; };
+		1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoJSONSerializableObject.swift; sourceTree = "<group>"; };
+		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
+		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
+		1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		1A7DC7C91FE421D5009F834E /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
+		1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		1A91F4E81FE4DEB0002F0E6E /* folderIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folderIcon2.png; path = "Assets.xcassets/icons8-pictures-folder-50.imageset/folderIcon2.png"; sourceTree = "<group>"; };
+		1A91F4EA1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-upload-to-the-cloud-500.png"; path = "Assets.xcassets/icons8-upload-to-the-cloud-100.imageset/icons8-upload-to-the-cloud-500.png"; sourceTree = "<group>"; };
 		1ABBF98E1FE33E2E0018769F /* GfyCat Video Uploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GfyCat Video Uploader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABBF9911FE33E2E0018769F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1ABBF9931FE33E2E0018769F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1ABBF9951FE33E2E0018769F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1ABBF9931FE33E2E0018769F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
 		1ABBF9981FE33E2E0018769F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1ABBF99A1FE33E2E0018769F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ABBF99A1FE33E2E0018769F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../../../Xcode Projects/GfyCat Video Uploader/GfyCat Video Uploader/Assets.xcassets"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABBF99D1FE33E2E0018769F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ABBF99F1FE33E2E0018769F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ABBF9A51FE34E480018769F /* WebRequestObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestObj.swift; sourceTree = "<group>"; };
+		1ABBF9F21FE3B6900018769F /* MediaTypeDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeDefaults.swift; sourceTree = "<group>"; };
+		1AF269C71FE3D7890093C568 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
+		1AF269CD1FE3F0B60093C568 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		3E8B852B1FF384D144474645 /* Pods-GfyCat Video Uploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat Video Uploader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader.debug.xcconfig"; sourceTree = "<group>"; };
+		9D9D7948BCDC4E2E3DC0ADE9 /* Pods_GfyCat_Video_Uploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GfyCat_Video_Uploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E6DC4CFC98AC120636B042 /* Pods-GfyCat Video Uploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat Video Uploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +72,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3639F8898A8C00AE5D754A6 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B671863AF70EF185586703D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E8B852B1FF384D144474645 /* Pods-GfyCat Video Uploader.debug.xcconfig */,
+				F0E6DC4CFC98AC120636B042 /* Pods-GfyCat Video Uploader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1A3ACA9E1FE4FA0E00179D98 /* Functors */ = {
+			isa = PBXGroup;
+			children = (
+				1A3ACAA11FE4FA4D00179D98 /* JSONSerialization */,
+				1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */,
+			);
+			name = Functors;
+			sourceTree = "<group>";
+		};
+		1A3ACAA11FE4FA4D00179D98 /* JSONSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */,
+			);
+			name = JSONSerialization;
+			sourceTree = "<group>";
+		};
+		1A7DC7C01FE415F7009F834E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A7DC7C81FE42089009F834E /* Nibs */,
+				1A7DC7C71FE42069009F834E /* Table View Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1A7DC7C71FE42069009F834E /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A7DC7CD1FE423BE009F834E /* SettingsTableViewCell.swift */,
+				1A7DC7C91FE421D5009F834E /* FileTableViewCell.swift */,
+				1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		1A7DC7C81FE42089009F834E /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */,
+				1A7DC7CA1FE421D5009F834E /* FileTableViewCell.xib */,
+				1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
 		1ABBF9851FE33E2E0018769F = {
 			isa = PBXGroup;
 			children = (
 				1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */,
 				1ABBF98F1FE33E2E0018769F /* Products */,
+				0B671863AF70EF185586703D /* Pods */,
+				BE72109C409AF1ED1CE6BA8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +155,10 @@
 		1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */ = {
 			isa = PBXGroup;
 			children = (
+				1A6050C81FE55B5200F0A55B /* GfyCat Video Uploader.entitlements */,
+				1ABBF9F11FE3B6400018769F /* Constants and Defaults */,
 				1ABBF9A91FE3504C0018769F /* Objects */,
+				1A7DC7C01FE415F7009F834E /* Views */,
 				1ABBF9A71FE34FEC0018769F /* View Controllers */,
 				1ABBF99A1FE33E2E0018769F /* Assets.xcassets */,
 				1ABBF9911FE33E2E0018769F /* AppDelegate.swift */,
@@ -72,8 +172,14 @@
 		1ABBF9A71FE34FEC0018769F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1ABBF9931FE33E2E0018769F /* FirstViewController.swift */,
-				1ABBF9951FE33E2E0018769F /* SecondViewController.swift */,
+				1ABBF9931FE33E2E0018769F /* UploadViewController.swift */,
+				1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */,
+				1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */,
+				1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */,
+				1AF269CD1FE3F0B60093C568 /* WebViewController.swift */,
+				1A7DC7C51FE41DB1009F834E /* MainTabBarViewController.swift */,
+				1A91F4E81FE4DEB0002F0E6E /* folderIcon2.png */,
+				1A91F4EA1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -81,9 +187,28 @@
 		1ABBF9A91FE3504C0018769F /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				1A3ACA9E1FE4FA0E00179D98 /* Functors */,
 				1ABBF9A51FE34E480018769F /* WebRequestObj.swift */,
+				1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		1ABBF9F11FE3B6400018769F /* Constants and Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				1ABBF9F21FE3B6900018769F /* MediaTypeDefaults.swift */,
+				1AF269C71FE3D7890093C568 /* ViewConstants.swift */,
+			);
+			name = "Constants and Defaults";
+			sourceTree = "<group>";
+		};
+		BE72109C409AF1ED1CE6BA8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D9D7948BCDC4E2E3DC0ADE9 /* Pods_GfyCat_Video_Uploader.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1ABBF9A21FE33E2E0018769F /* Build configuration list for PBXNativeTarget "GfyCat Video Uploader" */;
 			buildPhases = (
+				75EC0FF49BB9D08D9969B958 /* [CP] Check Pods Manifest.lock */,
 				1ABBF98A1FE33E2E0018769F /* Sources */,
 				1ABBF98B1FE33E2E0018769F /* Frameworks */,
 				1ABBF98C1FE33E2E0018769F /* Resources */,
+				44D05CD47D6C5633BA830EAB /* [CP] Embed Pods Frameworks */,
+				5461FF0610D2453D6220D63E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -119,6 +247,20 @@
 					1ABBF98D1FE33E2E0018769F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -145,23 +287,88 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7DC7D01FE423BE009F834E /* SettingsTableViewCell.xib in Resources */,
+				1A91F4E91FE4DEB0002F0E6E /* folderIcon2.png in Resources */,
 				1ABBF99E1FE33E2E0018769F /* LaunchScreen.storyboard in Resources */,
+				1A91F4EB1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png in Resources */,
+				1A7DC7CC1FE421D5009F834E /* FileTableViewCell.xib in Resources */,
 				1ABBF99B1FE33E2E0018769F /* Assets.xcassets in Resources */,
 				1ABBF9991FE33E2E0018769F /* Main.storyboard in Resources */,
+				1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44D05CD47D6C5633BA830EAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5461FF0610D2453D6220D63E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75EC0FF49BB9D08D9969B958 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1ABBF98A1FE33E2E0018769F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF269C81FE3D7890093C568 /* ViewConstants.swift in Sources */,
+				1A6050CA1FE593AE00F0A55B /* VideoJSONSerializableObject.swift in Sources */,
+				1A7DC7CB1FE421D5009F834E /* FileTableViewCell.swift in Sources */,
+				1AF269CE1FE3F0B60093C568 /* WebViewController.swift in Sources */,
 				1ABBF9A61FE34E480018769F /* WebRequestObj.swift in Sources */,
-				1ABBF9961FE33E2E0018769F /* SecondViewController.swift in Sources */,
+				1A7DC7C61FE41DB1009F834E /* MainTabBarViewController.swift in Sources */,
+				1A7DC7CF1FE423BE009F834E /* SettingsTableViewCell.swift in Sources */,
+				1ABBF9961FE33E2E0018769F /* FileManagerViewController.swift in Sources */,
 				1ABBF9921FE33E2E0018769F /* AppDelegate.swift in Sources */,
-				1ABBF9941FE33E2E0018769F /* FirstViewController.swift in Sources */,
+				1ABBF9F31FE3B6900018769F /* MediaTypeDefaults.swift in Sources */,
+				1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */,
+				1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */,
+				1AF269CC1FE3EEFE0093C568 /* MyProjectsViewController.swift in Sources */,
+				1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */,
+				1AF269CA1FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift in Sources */,
+				1ABBF9941FE33E2E0018769F /* UploadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +397,7 @@
 		1ABBF9A01FE33E2E0018769F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -216,16 +423,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: tyh24647@gmail.com (3ZFSS4SN58)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = ZM57TK6EDW;
+				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -237,9 +444,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = Untitled.p12;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -249,7 +456,7 @@
 		1ABBF9A11FE33E2E0018769F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -275,23 +482,24 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: tyh24647@gmail.com (3ZFSS4SN58)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = ZM57TK6EDW;
+				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE_SPECIFIER = Untitled.p12;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -300,15 +508,18 @@
 		};
 		1ABBF9A31FE33E2E0018769F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8B852B1FF384D144474645 /* Pods-GfyCat Video Uploader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZM57TK6EDW;
+				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tylero056.GfyCat-Video-Uploader";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tylh24647.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -318,15 +529,18 @@
 		};
 		1ABBF9A41FE33E2E0018769F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E6DC4CFC98AC120636B042 /* Pods-GfyCat Video Uploader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZM57TK6EDW;
+				DEVELOPMENT_TEAM = GZ6B7VNBWJ;
 				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tylero056.GfyCat-Video-Uploader";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tylh24647.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

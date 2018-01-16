@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import AVKit
+import AssetsLibrary
+import Photos
+import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +20,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        print("Requesting access to \"AVCaptureDevice\"...")
+        
+        // request to gain access to camera upon first launch
+        /*
+        AVCaptureDevice.requestAccess(
+            for: .video,
+            completionHandler: { response in
+                if response {
+                    print("\"AVCaptureDevice\" access granted")
+                } else {
+                    print("\"AVCaptureDevice\" access denied")
+                }
+        })
+ */
+
+        // request access to camera roll contents upon first launch
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized {
+                    print("User authorized camera roll access")
+                } else {
+                    print("User denied camera roll access")
+                }
+            })
+        }
+        
+        //NotificationCenter.default.addObserver(self, selector: Selector(willEnterFullScreen(_:)), name: "ShouldEnterFullScreen", object: nil)
+        application.applicationSupportsShakeToEdit = true
+        
         return true
+    }
+    
+    func willEnterFullScreen(_ notification: Notification) -> Void {
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -27,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -41,6 +81,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return .portrait
+    }
 
 }
 

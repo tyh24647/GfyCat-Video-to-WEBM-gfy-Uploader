@@ -4,74 +4,128 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--VideoProjects-->
+        <scene sceneID="fCN-Q2-25u">
+            <objects>
+                <tableViewController title="VideoProjects" id="sh1-ui-f9b" customClass="MyProjectsViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fdb-xd-rpH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vrw-Uc-eOB" customClass="ProjectsTableViewCell" customModule="GfyCat_Video_Uploader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vrw-Uc-eOB" id="x9K-Tz-IUp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sh1-ui-f9b" id="7AC-AY-Gy8"/>
+                            <outlet property="delegate" destination="sh1-ui-f9b" id="kOy-4S-aVr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Editor" image="icons8-video-trimming-50" id="JZS-jL-J9y">
+                        <color key="badgeColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEi-dj-19M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128" y="-849"/>
+        </scene>
+        <!--Upload-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Upload" id="9pv-A4-QxB" customClass="UploadViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="112" y="312" width="151" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Upload" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="132" y="195" width="112" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="90" y="363" width="195" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert to .gfy and Upload to GfyCat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                                <rect key="frame" x="54" y="246" width="268" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEs-un-B1h">
-                                <rect key="frame" x="90" y="406" width="195" height="30"/>
+                                <rect key="frame" x="51" y="289" width="274" height="30"/>
                                 <state key="normal" title="Select a file to upload..."/>
                                 <connections>
                                     <action selector="selectFileBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="JTs-kp-KWn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-rT-Gbr">
-                                <rect key="frame" x="158" y="444" width="60" height="30"/>
-                                <state key="normal" title="Upload"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-e6-2cN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W23-e2-9s1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="top" secondItem="cQ2-e6-2cN" secondAttribute="top" id="7Wp-x4-RGJ"/>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="centerY" secondItem="cQ2-e6-2cN" secondAttribute="centerY" id="BSY-lF-lvX"/>
+                                    <constraint firstAttribute="bottom" secondItem="W23-e2-9s1" secondAttribute="bottom" id="CKB-IA-Vn8"/>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="leading" secondItem="cQ2-e6-2cN" secondAttribute="leading" id="GLx-fq-cuF"/>
+                                    <constraint firstItem="W23-e2-9s1" firstAttribute="centerX" secondItem="cQ2-e6-2cN" secondAttribute="centerX" id="cFR-kT-pZ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="W23-e2-9s1" secondAttribute="trailing" id="p57-xC-FQI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="ejc-fP-zXy"/>
+                                </connections>
+                            </scrollView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-rT-Gbr">
+                                <rect key="frame" x="102" y="280" width="170" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="3jx-sw-Hch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Convert &amp; Upload"/>
                                 <connections>
                                     <action selector="uploadBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="PPP-Eh-35G"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W23-e2-9s1">
-                                <rect key="frame" x="67" y="150" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LEs-un-B1h" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="26" id="2ty-ej-xd3"/>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="W23-e2-9s1" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="67" id="CNp-t5-PDF"/>
-                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="top" secondItem="LEs-un-B1h" secondAttribute="bottom" constant="8" symbolic="YES" id="Tbd-9A-dpX"/>
-                            <constraint firstItem="W23-e2-9s1" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Tsy-hy-dr1"/>
-                            <constraint firstItem="W23-e2-9s1" firstAttribute="centerX" secondItem="LEs-un-B1h" secondAttribute="centerX" id="UcD-8e-3ww"/>
-                            <constraint firstItem="W23-e2-9s1" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="130" id="UqY-Ie-URa"/>
-                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="158" id="a0t-Ln-9ih"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="W23-e2-9s1" secondAttribute="bottom" constant="34" id="cMy-2v-ITQ"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                            <constraint firstItem="LEs-un-B1h" firstAttribute="centerX" secondItem="Es8-rT-Gbr" secondAttribute="centerX" id="k1k-5N-Xyj"/>
-                            <constraint firstItem="LEs-un-B1h" firstAttribute="leading" secondItem="A5M-7J-77L" secondAttribute="leading" id="qkm-om-Eb3"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="54" id="91B-Iq-Zi9"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="G32-Rw-icw"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="Klk-FE-Xve"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Nqh-Vl-GXF"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-117" id="OEm-i3-tMf"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="A5M-7J-77L" secondAttribute="centerX" id="Rcm-3T-1kN"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="cQ2-e6-2cN" secondAttribute="bottom" constant="-83" id="Xpr-op-E3e"/>
+                            <constraint firstItem="LEs-un-B1h" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="26" id="fLB-BM-nqu"/>
+                            <constraint firstItem="LEs-un-B1h" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="hRO-D0-577"/>
+                            <constraint firstItem="cQ2-e6-2cN" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="oJM-rX-igt"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="pYE-u1-ihl"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="top" secondItem="LEs-un-B1h" secondAttribute="bottom" constant="-39" id="sdV-gP-82m"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="centerX" secondItem="cQ2-e6-2cN" secondAttribute="centerX" id="wge-Bl-tuW"/>
+                            <constraint firstAttribute="trailing" secondItem="cQ2-e6-2cN" secondAttribute="trailing" id="wv3-cE-qQs"/>
+                            <constraint firstItem="LEs-un-B1h" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="51" id="wxX-m5-Dp4"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="yec-ba-tyS"/>
+                            <constraint firstItem="Es8-rT-Gbr" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="102" id="zRu-Ww-ay8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="icons8-upload-to-the-cloud-100" selectedImage="icons8-upload-to-the-cloud-100" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="imgView" destination="W23-e2-9s1" id="BQh-DF-q8h"/>
                         <outlet property="mainView" destination="KQZ-1w-vlD" id="gYF-et-jji"/>
+                        <outlet property="scrollView" destination="cQ2-e6-2cN" id="jaH-rI-Vx1"/>
                         <outlet property="selectFileBtn" destination="LEs-un-B1h" id="cZG-Is-4Ek"/>
                         <outlet property="uploadBtn" destination="Es8-rT-Gbr" id="pGQ-jY-tz9"/>
                     </connections>
@@ -80,64 +134,155 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--Settings-->
+        <scene sceneID="Cod-9E-Ibo">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <tableViewController title="Settings" id="q2e-jr-lK4" customClass="SettingsViewControllerTableViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wTp-NH-khw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IHi-Tp-b0T" customClass="SettingsTableViewCell" customModule="GfyCat_Video_Uploader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IHi-Tp-b0T" id="uyc-Va-KAd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q2e-jr-lK4" id="7jN-tc-tmM"/>
+                            <outlet property="delegate" destination="q2e-jr-lK4" id="3Nx-36-mBQ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-settings-50" id="KAq-Iw-d8I"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scR-oE-tQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-996" y="1189"/>
+        </scene>
+        <!--File Manager-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController title="File Manager" id="8rJ-Kc-sve" customClass="FileManagerViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sOY-oq-Zhe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TAJ-CI-LLb" customClass="FileTableViewCell" customModule="GfyCat_Video_Uploader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TAJ-CI-LLb" id="ekw-aA-Kuf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="My Gifs" image="folderIcon2.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1220" y="516.79160419790105"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--WebViewController-->
+        <scene sceneID="Wbj-00-nsD">
+            <objects>
+                <viewController title="WebViewController" id="E71-Gc-a3z" customClass="WebViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dd9-Wn-qnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meM-6h-OUm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="meM-6h-OUm" firstAttribute="top" secondItem="dd9-Wn-qnQ" secondAttribute="top" id="3pe-wR-GA0"/>
+                            <constraint firstAttribute="trailing" secondItem="meM-6h-OUm" secondAttribute="trailing" id="SZx-I6-Vlt"/>
+                            <constraint firstItem="meM-6h-OUm" firstAttribute="leading" secondItem="dd9-Wn-qnQ" secondAttribute="leading" id="aed-KN-Cni"/>
+                            <constraint firstAttribute="bottom" secondItem="meM-6h-OUm" secondAttribute="bottom" id="uoQ-jM-VXq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wPM-aA-PnA"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Title" id="tpD-aY-IqI"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="meM-6h-OUm" id="QPu-fU-63x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtc-is-xCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="1289"/>
+        </scene>
+        <!--TabBarViewController-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="TabBarViewController" id="49e-Tb-3d3" customClass="MainTabBarViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.64388290822814176" green="0.79741357594918461" blue="0.91903935185185182" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="dtj-cb-O2T" kind="relationship" relationship="viewControllers" id="7U4-Rr-Qrh"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="sh1-ui-f9b" kind="relationship" relationship="viewControllers" id="Hzp-pb-hlO"/>
+                        <segue destination="q2e-jr-lK4" kind="relationship" relationship="viewControllers" id="oTS-L5-hY1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-1086" y="-133"/>
+        </scene>
+        <!--WKWebViewNavController-->
+        <scene sceneID="BVd-Wj-vP9">
+            <objects>
+                <navigationController title="WKWebViewNavController" automaticallyAdjustsScrollViewInsets="NO" id="dtj-cb-O2T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browser" image="icons8-safari-50" id="5yP-TQ-mne">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L19-9A-4qa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vZw-Q8-sAu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="E71-Gc-a3z" kind="relationship" relationship="rootViewController" id="930-8h-DdM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPc-Ow-3zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="1120.8395802098951"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="folderIcon2.png" width="25" height="25"/>
+        <image name="icons8-safari-50" width="25" height="25"/>
+        <image name="icons8-settings-50" width="25" height="25"/>
+        <image name="icons8-upload-to-the-cloud-100" width="50" height="50"/>
+        <image name="icons8-video-trimming-50" width="25" height="25"/>
     </resources>
 </document>
