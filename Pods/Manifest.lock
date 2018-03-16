@@ -14,18 +14,56 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Alamofire (4.6.0)
-  - GfycatApiKit (0.0.7):
-    - AFNetworking (~> 3.0)
+  - Alamofire (4.7.0)
+  - AttributedLabel (1.1.2)
+  - DynamicBlurView (2.0.2)
+  - Firebase (4.10.1):
+    - Firebase/Core (= 4.10.1)
+  - Firebase/Core (4.10.1):
+    - FirebaseAnalytics (= 4.1.0)
+    - FirebaseCore (= 4.0.17)
+  - FirebaseAnalytics (4.1.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.17):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.9):
+    - FirebaseCore (~> 4.0)
+  - GfycatApiKit (0.0.14):
+    - AFNetworking (= 3.1.0)
     - UICKeyChainStore (= 2.1.1)
-  - GfycatKit (0.0.38):
-    - GfycatKit/Core (= 0.0.38)
-  - GfycatKit/Browser (0.0.38):
-    - GfycatApiKit (~> 0.0.7)
+  - GfycatKit (0.0.43):
+    - GfycatKit/Core (= 0.0.43)
+  - GfycatKit/Browser (0.0.43):
+    - GfycatApiKit (~> 0.0.14)
     - YYImage/WebP
     - YYWebImage
-  - GfycatKit/Core (0.0.38):
+  - GfycatKit/Core (0.0.43):
     - GfycatKit/Browser
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - SwiftyJSON (4.0.0)
+  - TableViewDragger (1.1.1)
   - UICKeyChainStore (2.1.1)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
@@ -39,18 +77,35 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - AttributedLabel
+  - DynamicBlurView
+  - Firebase
   - GfycatKit
+  - MMDrawerController (~> 0.5.7)
+  - SwiftyJSON
+  - TableViewDragger
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
-  GfycatApiKit: c0146d2e5f42c081e02ea9ac1263aea26afcf634
-  GfycatKit: bcc20860c9464d404c89f07913477a778e83b20e
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AttributedLabel: f2304965828afcf6df346073566f4ad4e04384cc
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
+  FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
+  FirebaseCore: 872307b001bbefda1dfa0dbfffa50a6919023d4a
+  FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
+  GfycatApiKit: 7fc3c27cbb4ad149386387d29101e60a71191ed0
+  GfycatKit: c0b220f6fc0841878246dd34a64d59b93270e0f2
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  TableViewDragger: 28692c57e3dfd32d5bc985e41f2e986f99da6baa
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 2957c82f35c880f5d45032a2fa294c89c6f73f6d
+PODFILE CHECKSUM: 8ec660ec211dd5cab140d511604cc5224ea9286b
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.4.0

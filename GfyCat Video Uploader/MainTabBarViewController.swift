@@ -8,27 +8,40 @@
 
 import UIKit
 
+private var tabBarVC: MainTabBarViewController?
+
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
+    @IBOutlet var mainTabBar: UITabBar!
+    
+    @objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
+    
+    static var instance: MainTabBarViewController {
+        guard let vc2 = tabBarVC else { fatalError() }
+        return vc2
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //self.selectedIndex = 2  // TODO consider changing and make into default
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
- 
-        /*
-        var tabBarItems = self.tabBarController?.toolbarItems
-        for var tBItem! in tabBarItems {
-            
-        }
-        */
         
-        self.selectedIndex = 2
+       
+        // change the color of the non-highlighted UITSabBar text to be less difficult to see
+//        //let tabBarItems = self.tabBarController!.tabBar.items
+//        let tabBarItems = self.tabBar.items
+//        for var tbItem in tabBarItems! {
+//            //TODO set disabled color
+//        }
+        
+        self.selectedIndex = 1 //2  //  <--                  start at default tab being center
+        
+        for _ in self.tabBar.items! {
+            ///if tabBarItem 
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,15 +57,12 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        if segue.destination.view != nil {
+        if segue.destination.view != nil && !segue.identifier!.isEmpty {
             
         } else {
             #if DEBUG
-                print("ERROR: Unable to perform segue with identifier \"\(String(describing: segue.identifier?.debugDescription))\"")
-                print("Skipping procedure")
+                NSLog("ERROR: Unable to perform segue with identifier \"\(segue.identifier!))\"")
+                NSLog("Skipping procedure")
             #endif
         }
     }

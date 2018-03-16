@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +38,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEi-dj-19M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="-849"/>
+            <point key="canvasLocation" x="-454" y="-946"/>
         </scene>
         <!--Upload-->
         <scene sceneID="hNz-n2-bh7">
@@ -98,6 +98,13 @@
                                     <action selector="uploadBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="PPP-Eh-35G"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ2-Yn-qci">
+                                <rect key="frame" x="118.5" y="327" width="139" height="30"/>
+                                <state key="normal" title="Convert Video File..."/>
+                                <connections>
+                                    <action selector="convertVideoBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="XiH-eW-Um4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -106,12 +113,14 @@
                             <constraint firstItem="cQ2-e6-2cN" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="Klk-FE-Xve"/>
                             <constraint firstItem="cQ2-e6-2cN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Nqh-Vl-GXF"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-117" id="OEm-i3-tMf"/>
+                            <constraint firstItem="zJ2-Yn-qci" firstAttribute="top" secondItem="LEs-un-B1h" secondAttribute="bottom" constant="8" symbolic="YES" id="Q7p-Dl-Fq7"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="A5M-7J-77L" secondAttribute="centerX" id="Rcm-3T-1kN"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="cQ2-e6-2cN" secondAttribute="bottom" constant="-83" id="Xpr-op-E3e"/>
                             <constraint firstItem="LEs-un-B1h" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="26" id="fLB-BM-nqu"/>
                             <constraint firstItem="LEs-un-B1h" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="hRO-D0-577"/>
                             <constraint firstItem="cQ2-e6-2cN" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="oJM-rX-igt"/>
                             <constraint firstItem="Es8-rT-Gbr" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="pYE-u1-ihl"/>
+                            <constraint firstItem="zJ2-Yn-qci" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="s71-Nw-Ro8"/>
                             <constraint firstItem="Es8-rT-Gbr" firstAttribute="top" secondItem="LEs-un-B1h" secondAttribute="bottom" constant="-39" id="sdV-gP-82m"/>
                             <constraint firstItem="Es8-rT-Gbr" firstAttribute="centerX" secondItem="cQ2-e6-2cN" secondAttribute="centerX" id="wge-Bl-tuW"/>
                             <constraint firstAttribute="trailing" secondItem="cQ2-e6-2cN" secondAttribute="trailing" id="wv3-cE-qQs"/>
@@ -123,6 +132,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="icons8-upload-to-the-cloud-100" selectedImage="icons8-upload-to-the-cloud-100" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="convertVideoBtn" destination="zJ2-Yn-qci" id="2hL-vL-zjO"/>
                         <outlet property="imgView" destination="W23-e2-9s1" id="BQh-DF-q8h"/>
                         <outlet property="mainView" destination="KQZ-1w-vlD" id="gYF-et-jji"/>
                         <outlet property="scrollView" destination="cQ2-e6-2cN" id="jaH-rI-Vx1"/>
@@ -132,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="951" y="-958"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Cod-9E-Ibo">
@@ -186,19 +196,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="516.79160419790105"/>
+            <point key="canvasLocation" x="1068" y="1101"/>
         </scene>
-        <!--WebViewController-->
+        <!--Web View-->
         <scene sceneID="Wbj-00-nsD">
             <objects>
-                <viewController title="WebViewController" id="E71-Gc-a3z" customClass="WebViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Web View" id="E71-Gc-a3z" customClass="WebViewController" customModule="GfyCat_Video_Uploader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dd9-Wn-qnQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meM-6h-OUm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -215,15 +225,15 @@
                         <viewLayoutGuide key="safeArea" id="wPM-aA-PnA"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Title" id="tpD-aY-IqI"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
+                    <navigationItem key="navigationItem" title="GfyCat" id="g4M-EP-ITB"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="meM-6h-OUm" id="QPu-fU-63x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtc-is-xCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="1289"/>
+            <point key="canvasLocation" x="3681" y="-45"/>
         </scene>
         <!--TabBarViewController-->
         <scene sceneID="yl2-sM-qoP">
@@ -234,10 +244,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.64388290822814176" green="0.79741357594918461" blue="0.91903935185185182" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.11439399844308601" green="0.37936758308268786" blue="0.83159722222222221" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="1" green="1" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
+                        <outlet property="mainTabBar" destination="W28-zg-YXA" id="dkv-9T-QS1"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="dtj-cb-O2T" kind="relationship" relationship="viewControllers" id="7U4-Rr-Qrh"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -247,7 +258,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1086" y="-133"/>
+            <point key="canvasLocation" x="-1527" y="-110"/>
         </scene>
         <!--WKWebViewNavController-->
         <scene sceneID="BVd-Wj-vP9">
@@ -257,12 +268,15 @@
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L19-9A-4qa">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorTransitionMaskImage="IMG_6369 2" id="L19-9A-4qa">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="0.14048400520000001" green="0.45778191089999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.14048400520000001" green="0.45778191089999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -275,10 +289,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPc-Ow-3zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="1120.8395802098951"/>
+            <point key="canvasLocation" x="1194" y="-67"/>
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_6369 2" width="150" height="150"/>
         <image name="folderIcon2.png" width="25" height="25"/>
         <image name="icons8-safari-50" width="25" height="25"/>
         <image name="icons8-settings-50" width="25" height="25"/>

@@ -1,0 +1,6 @@
+framework module GfycatApiKit {
+  umbrella header "GfycatApiKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
