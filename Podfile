@@ -17,7 +17,10 @@ target 'GfyCat Video Uploader' do       #  wanna retain this--Rain boy! Quit yo 
   pod "AttributedLabel"
 ##  pod 'SwiftFormat/CLI'
   pod 'TableViewDragger'
+  pod 'SwiftyJSON'
+  #pod 'Sparkle'
   
+  pod 'Firebase'
   
   pod 'Alamofire', '~>4.5'              # Web request delegate for iOS--hands down the best one ever made  
   # Pods for GfyCat Video Uploader

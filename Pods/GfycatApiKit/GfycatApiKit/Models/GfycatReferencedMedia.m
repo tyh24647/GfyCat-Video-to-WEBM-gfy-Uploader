@@ -43,7 +43,7 @@
     
     NSString *extensionString = [[messageURL.absoluteString componentsSeparatedByString:@"/"] lastObject];
     NSString *gfyName = [[extensionString componentsSeparatedByString:@"#"] firstObject];
-    NSString *gfyId = [[[extensionString componentsSeparatedByString:@"#"] firstObject] lowercaseString];
+    NSString *gfyId = [gfyName lowercaseString];
 
     if (GfyNotNull(gfyId) && (self = [super initWithGfyId:gfyId])) {
         
@@ -202,6 +202,11 @@
 - (NSArray<NSString *> *)tags
 {
     return @[];
+}
+
+- (BOOL)hasTransparency
+{
+    return true;
 }
 
 #pragma mark - NSCoding

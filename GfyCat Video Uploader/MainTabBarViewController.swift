@@ -8,8 +8,17 @@
 
 import UIKit
 
+private var tabBarVC: MainTabBarViewController?
+
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     @IBOutlet var mainTabBar: UITabBar!
+    
+    @objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
+    
+    static var instance: MainTabBarViewController {
+        guard let vc2 = tabBarVC else { fatalError() }
+        return vc2
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -20,15 +29,15 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
         // Do any additional setup after loading the view.
         
+       
         // change the color of the non-highlighted UITSabBar text to be less difficult to see
+//        //let tabBarItems = self.tabBarController!.tabBar.items
+//        let tabBarItems = self.tabBar.items
+//        for var tbItem in tabBarItems! {
+//            //TODO set disabled color
+//        }
         
-        //let tabBarItems = self.tabBarController!.tabBar.items
-        let tabBarItems = self.tabBar.items
-        for var tbItem in tabBarItems! {
-            //TODO set disabled color
-        }
-        
-        self.selectedIndex = 2
+        self.selectedIndex = 1 //2  //  <--                  start at default tab being center
         
         for _ in self.tabBar.items! {
             ///if tabBarItem 
@@ -52,8 +61,8 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
             
         } else {
             #if DEBUG
-                print("ERROR: Unable to perform segue with identifier \"\(String(describing: segue.identifier?.debugDescription))\"")
-                print("Skipping procedure")
+                NSLog("ERROR: Unable to perform segue with identifier \"\(segue.identifier!))\"")
+                NSLog("Skipping procedure")
             #endif
         }
     }
