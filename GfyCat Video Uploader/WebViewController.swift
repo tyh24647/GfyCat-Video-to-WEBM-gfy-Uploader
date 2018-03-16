@@ -19,6 +19,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     
     static var instance: WebViewController {
         guard let vc2 = webVC else { fatalError() }
+        var tmp = vc2.className
         return vc2
     }
     
@@ -153,6 +154,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     
     func wk_allowPictureInPicturePlayback(_ shouldAllow: Bool?) -> Void {
         self.webView.configuration.allowsPictureInPictureMediaPlayback = shouldAllow!
+        var tmp = TAG.completePath(caseSensitive: false)
     }
     
     override func didReceiveMemoryWarning() {

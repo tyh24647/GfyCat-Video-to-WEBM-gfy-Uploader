@@ -13,7 +13,8 @@ private var tabBarVC: MainTabBarViewController?
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     @IBOutlet var mainTabBar: UITabBar!
     
-    @objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
+    var TAG = String(describing: type(of: self))
+    //@objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
     
     static var instance: MainTabBarViewController {
         guard let vc2 = tabBarVC else { fatalError() }
@@ -26,6 +27,11 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print()
+        print(self.className)
+        print(TAG)
+        print()
 
         // Do any additional setup after loading the view.
         
