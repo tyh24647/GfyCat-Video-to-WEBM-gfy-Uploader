@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1ABEC1205B99B200CE5706 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1ABEC0205B99B200CE5706 /* NSObject+ClassName.swift */; };
 		1A1AEB201FE8A9380004DB1C /* TagConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1AEB1F1FE8A9380004DB1C /* TagConstants.swift */; };
 		1A1AEB221FE8BD3B0004DB1C /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1AEB211FE8BD3B0004DB1C /* JSONFormatter.swift */; };
 		1A1AEB241FE8D8D70004DB1C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1AEB231FE8D8D70004DB1C /* Log.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1ABEC0205B99B200CE5706 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		1A1AEB1F1FE8A9380004DB1C /* TagConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagConstants.swift; sourceTree = "<group>"; };
 		1A1AEB211FE8BD3B0004DB1C /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		1A1AEB231FE8D8D70004DB1C /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		1ABBF9A91FE3504C0018769F /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				1A1ABEC0205B99B200CE5706 /* NSObject+ClassName.swift */,
 				1A3ACA9E1FE4FA0E00179D98 /* Functors */,
 				1ABBF9A51FE34E480018769F /* WebRequestObj.swift */,
 				1A91E8461FE65B5600164CB8 /* Views To Test */,
@@ -430,6 +433,7 @@
 				1A1AEB241FE8D8D70004DB1C /* Log.swift in Sources */,
 				1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */,
 				1AF269CA1FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift in Sources */,
+				1A1ABEC1205B99B200CE5706 /* NSObject+ClassName.swift in Sources */,
 				1A1AEB201FE8A9380004DB1C /* TagConstants.swift in Sources */,
 				1ABBF9941FE33E2E0018769F /* UploadViewController.swift in Sources */,
 			);

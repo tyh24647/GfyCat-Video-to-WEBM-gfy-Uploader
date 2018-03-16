@@ -12,7 +12,7 @@ import AssetsLibrary
 import Photos
 import MediaPlayer
 import UserNotifications
-import Firebase
+import Firebase //              <------- Cloud storage library - TODO: Implement this?
 import WebKit
 
 @UIApplicationMain
@@ -21,22 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
     
-    public var serverURL : String? = "https://gfycat.com/upload"
+    public var serverURL: String? = "https://gfycat.com/upload"
     let gcmMessageIDKey = "gcm.message_id"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        #if DEBUG
-            NSLog("[\(self.TAG)] Aapplication launched")
-            #endif
+        
         // Override point for customization after application launch.
         
+        #if DEBUG
+        NSLog("[\(self.TAG)] Aapplication launched")
+        #endif
         
         #if DEBUG
-            NSLog("Requesting access to \"AVCaptureDevice\"...")
+        NSLog("Requesting access to \"AVCaptureDevice\"...")
         #endif
         
         // request to gain access to camera upon first launch
-        
         AVCaptureDevice.requestAccess(
             for: .video,
             completionHandler: { response in
@@ -67,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //NotificationCenter.default.addObserver(self, selector: Selector(willEnterFullScreen(_:)), name: "ShouldEnterFullScreen", object: nil)
+        
         application.applicationSupportsShakeToEdit = true
         
         return true
