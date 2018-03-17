@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-private var webVC: WebViewController? // Will hold the static WebViewController instance.
+private var webVC: WebViewController?
 
 class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigationDelegate {
     @objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
@@ -168,7 +168,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     
     func wk_allowPictureInPicturePlayback(_ shouldAllow: Bool?) -> Void {
         self.webView.configuration.allowsPictureInPictureMediaPlayback = shouldAllow!
-        var tmp = TAG.completePath(caseSensitive: false)
+        
         // TODO
     }
     
