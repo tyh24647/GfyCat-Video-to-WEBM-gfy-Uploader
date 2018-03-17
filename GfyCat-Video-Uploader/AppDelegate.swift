@@ -29,11 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         #if DEBUG
-        NSLog("[\(self.TAG)] Aapplication launched")
+        log_dbg(sender: self, "Application launched")
         #endif
         
         #if DEBUG
-        NSLog("Requesting access to \"AVCaptureDevice\"...")
+        log_dbg(sender: self,
+                "Requesting access to \"AVCaptureDevice\"...")
         #endif
         
         // request to gain access to camera upon first launch
@@ -41,26 +42,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             for: .video,
             completionHandler: { response in
                 if response {
-                    NSLog("\"AVCaptureDevice\" access granted")
+                    log_dbg(sender: self, "\"AVCaptureDevice\" access granted")
                 } else {
-                    NSLog("\"AVCaptureDevice\" access denied")
+                    log_dbg(sender: self, "\"AVCaptureDevice\" access denied")
                 }
         })
         
         // request access to camera roll contents upon first launch
         #if DEBUG
-            NSLog("[\(self.TAG)] Determing access permissions to device \"Camera Roll\"")
+            log_dbg(sender: self, "Determing access permissions to device \"Camera Roll\"")
         #endif
         let photosAuthStatus = PHPhotoLibrary.authorizationStatus()
         if photosAuthStatus == .notDetermined {
             PHPhotoLibrary.requestAuthorization({photosAuthStatus in
                 if photosAuthStatus == .authorized {
                     #if DEBUG
-                        NSLog("[\(self.TAG)] User authorized camera roll access")
+                    log_dbg(sender: self, "User authorized camera roll access")
                     #endif
                 } else {
                     #if DEBUG
-                        NSLog("[\(self.TAG)] User denied camera roll access")
+                    log_dbg(sender: self, "User denied camera roll access")
                     #endif
                 }
             })

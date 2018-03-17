@@ -13,8 +13,8 @@ private var tabBarVC: MainTabBarViewController?
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     @IBOutlet var mainTabBar: UITabBar!
     
-    var TAG = String(describing: type(of: self))
-    //@objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
+    @objc var TAG = NSStringFromClass(classForCoder()).components(separatedBy: ".").last! as String
+    //MainTabBarViewController.instance.className //AppDelegate.classForCoder().className(for: MainTabBarViewController.self) as String?
     
     static var instance: MainTabBarViewController {
         guard let vc2 = tabBarVC else { fatalError() }
@@ -28,14 +28,10 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print()
-        print(self.className)
-        print(TAG)
-        print()
+        log_dbg(sender: self, "View loaded successfully")
 
         // Do any additional setup after loading the view.
         
-       
         // change the color of the non-highlighted UITSabBar text to be less difficult to see
 //        //let tabBarItems = self.tabBarController!.tabBar.items
 //        let tabBarItems = self.tabBar.items
@@ -67,10 +63,10 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
             
         } else {
             #if DEBUG
-                NSLog("ERROR: Unable to perform segue with identifier \"\(segue.identifier!))\"")
-                NSLog("Skipping procedure")
+                log_dbg("ERROR: Unable to perform segue with identifier \"\(segue.identifier!))\"")
+                log_dbg("Skipping procedure")
             #endif
         }
     }
-
 }
+

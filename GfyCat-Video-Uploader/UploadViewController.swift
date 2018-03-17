@@ -11,6 +11,8 @@ import AVKit
 import CoreVideo
 import Alamofire
 
+private var uploadVC: UploadViewController?
+
 /// FirstViewController displays the view controller allowing the user to select and upload
 /// media to http://online-convert.com/ through the use of their photo library or cloud drive(s)
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
@@ -32,16 +34,19 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     var selectedImgURL: URL!
     var errMsg: String!
     
+    static var instance: UploadViewController {
+        guard let vc2 = uploadVC else { fatalError() }
+        return vc2
+    }
+    
     /// Do any additional setup after loading the view, typically from a nib.
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureImgView()
         configureScrollView()
         configureBtns()
         configureTabBarExtras()
     }
-    
     
     /// Configures the tab bar view customizations when the upload view is being loaded
     ///
@@ -124,6 +129,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         return self.imgView
     }
     
+    
+    /// Configures the UI attributes of the buttons
     func configureBtns() -> Void {
         self.playBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         self.playBtn.setTitle("Play", for: .normal)
