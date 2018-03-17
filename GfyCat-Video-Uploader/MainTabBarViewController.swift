@@ -39,7 +39,7 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate {
 //            //TODO set disabled color
 //        }
         
-        self.selectedIndex = 1 //2  //  <--                  start at default tab being center
+        self.selectedIndex = 2  //  <--                  start at default tab being center
         
         for _ in self.tabBar.items! {
             ///if tabBarItem 
