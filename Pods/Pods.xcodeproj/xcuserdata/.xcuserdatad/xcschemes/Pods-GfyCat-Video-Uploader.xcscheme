@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '205B959D46F1857B559D1366A2DD3EB3'
-               BlueprintName = 'Pods-GfyCat Video Uploader'
+               BlueprintIdentifier = 'F2A41259DFA9D8058CB917A5A38B2493'
+               BlueprintName = 'Pods-GfyCat-Video-Uploader'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-GfyCat Video Uploader.framework'>
+               BuildableName = 'Pods-GfyCat-Video-Uploader.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

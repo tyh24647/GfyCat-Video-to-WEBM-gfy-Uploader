@@ -11,6 +11,12 @@
 		1A1AEB201FE8A9380004DB1C /* TagConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1AEB1F1FE8A9380004DB1C /* TagConstants.swift */; };
 		1A1AEB221FE8BD3B0004DB1C /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1AEB211FE8BD3B0004DB1C /* JSONFormatter.swift */; };
 		1A1AEB241FE8D8D70004DB1C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1AEB231FE8D8D70004DB1C /* Log.swift */; };
+		1A30B9D2205C9BBA00EED988 /* NSLog+log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30B9D1205C9BBA00EED988 /* NSLog+log.swift */; };
+		1A30B9D4205CA02100EED988 /* CallStackAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30B9D3205CA02100EED988 /* CallStackAnalyzer.swift */; };
+		1A30B9D9205CB05500EED988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A30B9D8205CB05400EED988 /* Assets.xcassets */; };
+		1A30B9EB205CC13500EED988 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A30B9EA205CC13500EED988 /* CloudKit.framework */; };
+		1A30B9EC205CC1B800EED988 /* GfyCat-Video-Uploader-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 1A30B9DE205CB0D500EED988 /* GfyCat-Video-Uploader-Bridging-Header.h */; settings = {COMPILER_FLAGS = "-ObjC"; }; };
+		1A30B9EE205CC24200EED988 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A30B9ED205CC24200EED988 /* StoreKit.framework */; };
 		1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */; };
 		1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */; };
 		1A6050CA1FE593AE00F0A55B /* VideoJSONSerializableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */; };
@@ -27,7 +33,6 @@
 		1ABBF9941FE33E2E0018769F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9931FE33E2E0018769F /* UploadViewController.swift */; };
 		1ABBF9961FE33E2E0018769F /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */; };
 		1ABBF9991FE33E2E0018769F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF9971FE33E2E0018769F /* Main.storyboard */; };
-		1ABBF99B1FE33E2E0018769F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF99A1FE33E2E0018769F /* Assets.xcassets */; };
 		1ABBF99E1FE33E2E0018769F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABBF99C1FE33E2E0018769F /* LaunchScreen.storyboard */; };
 		1ABBF9A61FE34E480018769F /* WebRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9A51FE34E480018769F /* WebRequestObj.swift */; };
 		1ABBF9F31FE3B6900018769F /* MediaTypeDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBF9F21FE3B6900018769F /* MediaTypeDefaults.swift */; };
@@ -43,9 +48,17 @@
 		1A1AEB1F1FE8A9380004DB1C /* TagConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagConstants.swift; sourceTree = "<group>"; };
 		1A1AEB211FE8BD3B0004DB1C /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		1A1AEB231FE8D8D70004DB1C /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		1A30B9D1205C9BBA00EED988 /* NSLog+log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLog+log.swift"; sourceTree = "<group>"; };
+		1A30B9D3205CA02100EED988 /* CallStackAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStackAnalyzer.swift; sourceTree = "<group>"; };
+		1A30B9D8205CB05400EED988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A30B9DE205CB0D500EED988 /* GfyCat-Video-Uploader-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GfyCat-Video-Uploader-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A30B9E3205CB26600EED988 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		1A30B9E5205CB4D800EED988 /* GfyCat-Video-Uploader.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "GfyCat-Video-Uploader.entitlements"; sourceTree = "<group>"; };
+		1A30B9EA205CC13500EED988 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1A30B9ED205CC24200EED988 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1A30BBA7205CCA3400EED988 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		1A3ACAA21FE4FA7200179D98 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
-		1A6050C81FE55B5200F0A55B /* GfyCat Video Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GfyCat Video Uploader.entitlements"; sourceTree = "<group>"; };
 		1A6050C91FE593AE00F0A55B /* VideoJSONSerializableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoJSONSerializableObject.swift; sourceTree = "<group>"; };
 		1A7DC7C11FE41628009F834E /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		1A7DC7C21FE41628009F834E /* ProjectsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsTableViewCell.xib; sourceTree = "<group>"; };
@@ -56,12 +69,11 @@
 		1A7DC7CE1FE423BE009F834E /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		1A91F4E81FE4DEB0002F0E6E /* folderIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folderIcon2.png; path = "Assets.xcassets/icons8-pictures-folder-50.imageset/folderIcon2.png"; sourceTree = "<group>"; };
 		1A91F4EA1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-upload-to-the-cloud-500.png"; path = "Assets.xcassets/icons8-upload-to-the-cloud-100.imageset/icons8-upload-to-the-cloud-500.png"; sourceTree = "<group>"; };
-		1ABBF98E1FE33E2E0018769F /* GfyCat Video Uploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GfyCat Video Uploader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ABBF98E1FE33E2E0018769F /* GfyCat-Video-Uploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GfyCat-Video-Uploader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABBF9911FE33E2E0018769F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABBF9931FE33E2E0018769F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		1ABBF9951FE33E2E0018769F /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
 		1ABBF9981FE33E2E0018769F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1ABBF99A1FE33E2E0018769F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../../../Xcode Projects/GfyCat Video Uploader/GfyCat Video Uploader/Assets.xcassets"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABBF99D1FE33E2E0018769F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ABBF99F1FE33E2E0018769F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ABBF9A51FE34E480018769F /* WebRequestObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestObj.swift; sourceTree = "<group>"; };
@@ -70,9 +82,9 @@
 		1AF269C91FE3ECE10093C568 /* SettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		1AF269CB1FE3EEFE0093C568 /* MyProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsViewController.swift; sourceTree = "<group>"; };
 		1AF269CD1FE3F0B60093C568 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		3E8B852B1FF384D144474645 /* Pods-GfyCat Video Uploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat Video Uploader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader.debug.xcconfig"; sourceTree = "<group>"; };
+		1F9E121CEA339E3BED47316B /* Pods-GfyCat-Video-Uploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat-Video-Uploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat-Video-Uploader/Pods-GfyCat-Video-Uploader.release.xcconfig"; sourceTree = "<group>"; };
 		9D9D7948BCDC4E2E3DC0ADE9 /* Pods_GfyCat_Video_Uploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GfyCat_Video_Uploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0E6DC4CFC98AC120636B042 /* Pods-GfyCat Video Uploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat Video Uploader.release.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader.release.xcconfig"; sourceTree = "<group>"; };
+		B8B4F507D547AEC0E9DBD835 /* Pods-GfyCat-Video-Uploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GfyCat-Video-Uploader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GfyCat-Video-Uploader/Pods-GfyCat-Video-Uploader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A30B9EB205CC13500EED988 /* CloudKit.framework in Frameworks */,
 				E3639F8898A8C00AE5D754A6 /* Pods_GfyCat_Video_Uploader.framework in Frameworks */,
+				1A30B9EE205CC24200EED988 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +104,8 @@
 		0B671863AF70EF185586703D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3E8B852B1FF384D144474645 /* Pods-GfyCat Video Uploader.debug.xcconfig */,
-				F0E6DC4CFC98AC120636B042 /* Pods-GfyCat Video Uploader.release.xcconfig */,
+				B8B4F507D547AEC0E9DBD835 /* Pods-GfyCat-Video-Uploader.debug.xcconfig */,
+				1F9E121CEA339E3BED47316B /* Pods-GfyCat-Video-Uploader.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -102,6 +116,7 @@
 				1A3ACAA11FE4FA4D00179D98 /* JSONSerialization */,
 				1A3ACA9F1FE4FA4800179D98 /* JSONDataManager.swift */,
 				1A1AEB231FE8D8D70004DB1C /* Log.swift */,
+				1A30B9D3205CA02100EED988 /* CallStackAnalyzer.swift */,
 			);
 			name = Functors;
 			sourceTree = "<group>";
@@ -161,7 +176,7 @@
 		1ABBF9851FE33E2E0018769F = {
 			isa = PBXGroup;
 			children = (
-				1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */,
+				1ABBF9901FE33E2E0018769F /* GfyCat-Video-Uploader */,
 				1ABBF98F1FE33E2E0018769F /* Products */,
 				0B671863AF70EF185586703D /* Pods */,
 				BE72109C409AF1ED1CE6BA8A /* Frameworks */,
@@ -171,26 +186,27 @@
 		1ABBF98F1FE33E2E0018769F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1ABBF98E1FE33E2E0018769F /* GfyCat Video Uploader.app */,
+				1ABBF98E1FE33E2E0018769F /* GfyCat-Video-Uploader.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1ABBF9901FE33E2E0018769F /* GfyCat Video Uploader */ = {
+		1ABBF9901FE33E2E0018769F /* GfyCat-Video-Uploader */ = {
 			isa = PBXGroup;
 			children = (
-				1A6050C81FE55B5200F0A55B /* GfyCat Video Uploader.entitlements */,
+				1A30B9DE205CB0D500EED988 /* GfyCat-Video-Uploader-Bridging-Header.h */,
+				1A30B9E5205CB4D800EED988 /* GfyCat-Video-Uploader.entitlements */,
 				1ABBF9F11FE3B6400018769F /* Constants and Defaults */,
 				1ABBF9A91FE3504C0018769F /* Objects */,
 				1A7DC7C01FE415F7009F834E /* Views */,
 				1ABBF9A71FE34FEC0018769F /* View Controllers */,
-				1ABBF99A1FE33E2E0018769F /* Assets.xcassets */,
+				1A30B9D8205CB05400EED988 /* Assets.xcassets */,
 				1ABBF9911FE33E2E0018769F /* AppDelegate.swift */,
 				1ABBF99F1FE33E2E0018769F /* Info.plist */,
 				1ABBF9971FE33E2E0018769F /* Main.storyboard */,
 				1ABBF99C1FE33E2E0018769F /* LaunchScreen.storyboard */,
 			);
-			path = "GfyCat Video Uploader";
+			path = "GfyCat-Video-Uploader";
 			sourceTree = "<group>";
 		};
 		1ABBF9A71FE34FEC0018769F /* View Controllers */ = {
@@ -212,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1ABEC0205B99B200CE5706 /* NSObject+ClassName.swift */,
+				1A30B9D1205C9BBA00EED988 /* NSLog+log.swift */,
 				1A3ACA9E1FE4FA0E00179D98 /* Functors */,
 				1ABBF9A51FE34E480018769F /* WebRequestObj.swift */,
 				1A91E8461FE65B5600164CB8 /* Views To Test */,
@@ -234,6 +251,10 @@
 		BE72109C409AF1ED1CE6BA8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A30BBA7205CCA3400EED988 /* libstdc++.tbd */,
+				1A30B9ED205CC24200EED988 /* StoreKit.framework */,
+				1A30B9EA205CC13500EED988 /* CloudKit.framework */,
+				1A30B9E3205CB26600EED988 /* libstdc++.6.0.9.tbd */,
 				9D9D7948BCDC4E2E3DC0ADE9 /* Pods_GfyCat_Video_Uploader.framework */,
 			);
 			name = Frameworks;
@@ -242,9 +263,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1ABBF98D1FE33E2E0018769F /* GfyCat Video Uploader */ = {
+		1ABBF98D1FE33E2E0018769F /* GfyCat-Video-Uploader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1ABBF9A21FE33E2E0018769F /* Build configuration list for PBXNativeTarget "GfyCat Video Uploader" */;
+			buildConfigurationList = 1ABBF9A21FE33E2E0018769F /* Build configuration list for PBXNativeTarget "GfyCat-Video-Uploader" */;
 			buildPhases = (
 				75EC0FF49BB9D08D9969B958 /* [CP] Check Pods Manifest.lock */,
 				1ABBF98A1FE33E2E0018769F /* Sources */,
@@ -257,9 +278,9 @@
 			);
 			dependencies = (
 			);
-			name = "GfyCat Video Uploader";
+			name = "GfyCat-Video-Uploader";
 			productName = "GfyCat Video Uploader";
-			productReference = 1ABBF98E1FE33E2E0018769F /* GfyCat Video Uploader.app */;
+			productReference = 1ABBF98E1FE33E2E0018769F /* GfyCat-Video-Uploader.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,14 +306,23 @@
 							com.apple.DataProtection = {
 								enabled = 0;
 							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
 					};
 				};
 			};
-			buildConfigurationList = 1ABBF9891FE33E2E0018769F /* Build configuration list for PBXProject "GfyCat Video Uploader" */;
+			buildConfigurationList = 1ABBF9891FE33E2E0018769F /* Build configuration list for PBXProject "GfyCat-Video-Uploader" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -305,7 +335,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1ABBF98D1FE33E2E0018769F /* GfyCat Video Uploader */,
+				1ABBF98D1FE33E2E0018769F /* GfyCat-Video-Uploader */,
 			);
 		};
 /* End PBXProject section */
@@ -320,8 +350,8 @@
 				1ABBF99E1FE33E2E0018769F /* LaunchScreen.storyboard in Resources */,
 				1A91F4EB1FE4EA7D002F0E6E /* icons8-upload-to-the-cloud-500.png in Resources */,
 				1A7DC7CC1FE421D5009F834E /* FileTableViewCell.xib in Resources */,
-				1ABBF99B1FE33E2E0018769F /* Assets.xcassets in Resources */,
 				1ABBF9991FE33E2E0018769F /* Main.storyboard in Resources */,
+				1A30B9D9205CB05500EED988 /* Assets.xcassets in Resources */,
 				1A7DC7C41FE41628009F834E /* ProjectsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +365,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat-Video-Uploader/Pods-GfyCat-Video-Uploader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AttributedLabel/AttributedLabel.framework",
@@ -370,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat-Video-Uploader/Pods-GfyCat-Video-Uploader-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5461FF0610D2453D6220D63E /* [CP] Copy Pods Resources */ = {
@@ -379,7 +409,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat-Video-Uploader/Pods-GfyCat-Video-Uploader-resources.sh",
 				"${PODS_ROOT}/GfycatKit/Libraries/GfycatBrowserKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -388,7 +418,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat Video Uploader/Pods-GfyCat Video Uploader-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GfyCat-Video-Uploader/Pods-GfyCat-Video-Uploader-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75EC0FF49BB9D08D9969B958 /* [CP] Check Pods Manifest.lock */ = {
@@ -402,7 +432,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GfyCat Video Uploader-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GfyCat-Video-Uploader-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -416,6 +446,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A30B9EC205CC1B800EED988 /* GfyCat-Video-Uploader-Bridging-Header.h in Sources */,
+				1A30B9D2205C9BBA00EED988 /* NSLog+log.swift in Sources */,
 				1AF269C81FE3D7890093C568 /* ViewConstants.swift in Sources */,
 				1A6050CA1FE593AE00F0A55B /* VideoJSONSerializableObject.swift in Sources */,
 				1A7DC7CB1FE421D5009F834E /* FileTableViewCell.swift in Sources */,
@@ -429,6 +461,7 @@
 				1ABBF9F31FE3B6900018769F /* MediaTypeDefaults.swift in Sources */,
 				1A3ACAA01FE4FA4800179D98 /* JSONDataManager.swift in Sources */,
 				1A3ACAA31FE4FA7200179D98 /* JSONSerializer.swift in Sources */,
+				1A30B9D4205CA02100EED988 /* CallStackAnalyzer.swift in Sources */,
 				1AF269CC1FE3EEFE0093C568 /* MyProjectsViewController.swift in Sources */,
 				1A1AEB241FE8D8D70004DB1C /* Log.swift in Sources */,
 				1A7DC7C31FE41628009F834E /* ProjectsTableViewCell.swift in Sources */,
@@ -464,7 +497,7 @@
 		1ABBF9A01FE33E2E0018769F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -492,6 +525,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "GfyCat-Video-Uploader/GfyCat Video Uploader.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: tyh24647@gmail.com (3ZFSS4SN58)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
@@ -507,12 +541,13 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/GfyCat-Video-Uploader/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -520,14 +555,15 @@
 				PROVISIONING_PROFILE_SPECIFIER = iOS_Development_cert.p12;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/GfyCat-Video-Uploader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Debug;
 		};
 		1ABBF9A11FE33E2E0018769F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -555,6 +591,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "GfyCat-Video-Uploader/GfyCat Video Uploader.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: tyh24647@gmail.com (3ZFSS4SN58)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
@@ -566,17 +603,19 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/GfyCat-Video-Uploader/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = iOS_Development_cert.p12;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/GfyCat-Video-Uploader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -584,17 +623,18 @@
 		};
 		1ABBF9A31FE33E2E0018769F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E8B852B1FF384D144474645 /* Pods-GfyCat Video Uploader.debug.xcconfig */;
+			baseConfigurationReference = B8B4F507D547AEC0E9DBD835 /* Pods-GfyCat-Video-Uploader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "GfyCat-Video-Uploader/GfyCat-Video-Uploader.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = ZM57TK6EDW;
-				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = "$(SRCROOT)/GfyCat-Video-Uploader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_CFLAGS = (
@@ -626,9 +666,73 @@
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/GfycatKit\"",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AttributedLabel\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"DynamicBlurView\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"GfycatApiKit\"",
+					"-framework",
+					"\"GfycatBrowserKit\"",
+					"-framework",
+					"\"GfycatKit\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"MMDrawerController\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TableViewDragger\"",
+					"-framework",
+					"\"UICKeyChainStore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYImage\"",
+					"-framework",
+					"\"YYWebImage\"",
+					"-framework",
+					"\"nanopb\"",
+				);
+				PODS_PODFILE_DIR_PATH = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tylero056.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/tyhostager/Xcode Projects/GfyCat Video Uploader/GfyCat-Video-Uploader/GfyCat-Video-Uploader-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -636,21 +740,86 @@
 		};
 		1ABBF9A41FE33E2E0018769F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0E6DC4CFC98AC120636B042 /* Pods-GfyCat Video Uploader.release.xcconfig */;
+			baseConfigurationReference = 1F9E121CEA339E3BED47316B /* Pods-GfyCat-Video-Uploader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "GfyCat Video Uploader/GfyCat Video Uploader.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "GfyCat-Video-Uploader/GfyCat-Video-Uploader.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = ZM57TK6EDW;
-				INFOPLIST_FILE = "GfyCat Video Uploader/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = "$(SRCROOT)/GfyCat-Video-Uploader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AttributedLabel\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"DynamicBlurView\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"GfycatApiKit\"",
+					"-framework",
+					"\"GfycatBrowserKit\"",
+					"-framework",
+					"\"GfycatKit\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"MMDrawerController\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TableViewDragger\"",
+					"-framework",
+					"\"UICKeyChainStore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYImage\"",
+					"-framework",
+					"\"YYWebImage\"",
+					"-framework",
+					"\"nanopb\"",
+				);
+				PODS_PODFILE_DIR_PATH = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tylero056.GfyCat-Video-Uploader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/tyhostager/Xcode Projects/GfyCat Video Uploader/GfyCat-Video-Uploader/GfyCat-Video-Uploader-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -659,7 +828,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1ABBF9891FE33E2E0018769F /* Build configuration list for PBXProject "GfyCat Video Uploader" */ = {
+		1ABBF9891FE33E2E0018769F /* Build configuration list for PBXProject "GfyCat-Video-Uploader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1ABBF9A01FE33E2E0018769F /* Debug */,
@@ -668,7 +837,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1ABBF9A21FE33E2E0018769F /* Build configuration list for PBXNativeTarget "GfyCat Video Uploader" */ = {
+		1ABBF9A21FE33E2E0018769F /* Build configuration list for PBXNativeTarget "GfyCat-Video-Uploader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1ABBF9A31FE33E2E0018769F /* Debug */,

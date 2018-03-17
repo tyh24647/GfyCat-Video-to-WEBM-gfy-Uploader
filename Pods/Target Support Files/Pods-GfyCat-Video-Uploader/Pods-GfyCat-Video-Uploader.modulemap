@@ -1,5 +1,5 @@
 framework module Pods_GfyCat_Video_Uploader {
-  umbrella header "Pods-GfyCat Video Uploader-umbrella.h"
+  umbrella header "Pods-GfyCat-Video-Uploader-umbrella.h"
 
   export *
   module * { export * }

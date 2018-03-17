@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1ABBF98D1FE33E2E0018769F"
-               BuildableName = "GfyCat Video Uploader.app"
-               BlueprintName = "GfyCat Video Uploader"
-               ReferencedContainer = "container:GfyCat Video Uploader.xcodeproj">
+               BuildableName = "GfyCat-Video-Uploader.app"
+               BlueprintName = "GfyCat-Video-Uploader"
+               ReferencedContainer = "container:GfyCat-Video-Uploader.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1ABBF98D1FE33E2E0018769F"
-            BuildableName = "GfyCat Video Uploader.app"
-            BlueprintName = "GfyCat Video Uploader"
-            ReferencedContainer = "container:GfyCat Video Uploader.xcodeproj">
+            BuildableName = "GfyCat-Video-Uploader.app"
+            BlueprintName = "GfyCat-Video-Uploader"
+            ReferencedContainer = "container:GfyCat-Video-Uploader.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1ABBF98D1FE33E2E0018769F"
-            BuildableName = "GfyCat Video Uploader.app"
-            BlueprintName = "GfyCat Video Uploader"
-            ReferencedContainer = "container:GfyCat Video Uploader.xcodeproj">
+            BuildableName = "GfyCat-Video-Uploader.app"
+            BlueprintName = "GfyCat-Video-Uploader"
+            ReferencedContainer = "container:GfyCat-Video-Uploader.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1ABBF98D1FE33E2E0018769F"
-            BuildableName = "GfyCat Video Uploader.app"
-            BlueprintName = "GfyCat Video Uploader"
-            ReferencedContainer = "container:GfyCat Video Uploader.xcodeproj">
+            BuildableName = "GfyCat-Video-Uploader.app"
+            BlueprintName = "GfyCat-Video-Uploader"
+            ReferencedContainer = "container:GfyCat-Video-Uploader.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

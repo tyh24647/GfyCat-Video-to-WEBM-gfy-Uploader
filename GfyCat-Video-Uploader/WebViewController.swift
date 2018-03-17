@@ -19,7 +19,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     
     static var instance: WebViewController {
         guard let vc2 = webVC else { fatalError() }
-        var tmp = vc2.className
+        vc2.TAG = vc2.className
         return vc2
     }
     
@@ -28,11 +28,13 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     /// - Parameter animated: Whether or not the view will be animated when appearing
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        log_dbg(sender: WebViewController.classForCoder().class(), "Initializing...")
         
         // do setup before loading the view
         let notificationName = Notification.Name("updateWebView")
         NotificationCenter.default.addObserver(self, selector: #selector(WebViewController.updateWebView), name: notificationName, object: nil)
         updateWebView()
+        log_dbg(sender: WebViewController.classForCoder().class(), "Initialized successfully")
     }
     
     override func viewDidLoad() {
@@ -41,15 +43,20 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         
         
         webVC = self // Set the property to self.
+        
+        log_dbg(sender: self, "loading view...")
+        
         configureWebView()
         //configureNavBarItems()    //    <-- TODO: Fix me--not working
         
         self.webView.navigationDelegate = self
-        
+        log_dbg(sender: self, "view loaded successfully")
         
     }
     
     func configureWebView() -> Void {
+        log_dbg("configuring...")
+
         if self.webView == nil {
             self.webView = WKWebView(frame: self.view.frame)
         }
@@ -68,12 +75,14 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     
     func load_url(server_url: String) -> Void {
         guard let url = URL(string: server_url) else {
-            print("Invalid URL")
+            log_dbg("Invalid URL")
             return
         }
         
         let request = URLRequest(url: url)
+        log_dbg("Submitting web request with URL: \"\(server_url)\"")
         self.webView.load(request)
+        log_dbg("Webview loaded URL with request: \(request))")
     }
     
     @objc func updateWebView() {
@@ -83,12 +92,17 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     }
     
     func configureNavBarItems() -> Void {
-        let logo = UIImage(named: "IMG_6370")
+        let log_dbgo = UIImage(named: "IMG_6370")
         
-        if let titleImg = logo {
+        if let titleImg = log_dbgo {
             let navBar = self.navigationController!.navigationBar
             var navTitleItemView = self.navigationItem.titleView
-            self.navigationController?.navigationBar.prefersLargeTitles = true
+            
+            if #available(iOS 11.0, *) {
+                self.navigationController?.navigationBar.prefersLargeTitles = true
+            } else {
+                // Fallback on earlier versions
+            }
             self.navigationItem.titleView = navTitleItemView
             
             if self.navigationController != nil {
@@ -117,12 +131,12 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
         var didSetWithoutErrors: Bool!
         
         #if DEBUG
-            NSLog("[\(self.TAG)] Checking for webkit view value for key \"\(String(describing: key))\"")
+            log_dbg("[\(self.TAG)] Checking for webkit view value for key \"\(String(describing: key))\"")
         #endif
         if let keyVal = key as String?, let valVar = value as Any? {
             if self.webView.value(forKey: keyVal) != nil {
                 #if DEBUG
-                    NSLog(
+                    log_dbg(
                         """
                         [\(self.TAG)] Webkit configuration setting for key \"\(String(describing: keyVal))\" has been found.\"
                         \nAssigning value of \"\(String(describing: (valVar as AnyObject)))\"
@@ -131,12 +145,12 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
                 #endif
                 self.webView.setValue(valVar, forKey: keyVal)
                 #if DEBUG
-                    NSLog("[\(self.TAG)] Value assigned successfully")
+                    log_dbg("[\(self.TAG)] Value assigned successfully")
                 #endif
                 didSetWithoutErrors = true
             } else {
                 #if DEBUG
-                    NSLog(
+                    log_dbg(
                         """
                         [\(self.TAG)] ERROR: Unable to assign the specified value \"\(String(describing: value))\"
                         to the given key: \"\(String(describing: keyVal))\"
@@ -155,6 +169,7 @@ class WebViewController: UIViewController, UINavigationBarDelegate, WKNavigation
     func wk_allowPictureInPicturePlayback(_ shouldAllow: Bool?) -> Void {
         self.webView.configuration.allowsPictureInPictureMediaPlayback = shouldAllow!
         var tmp = TAG.completePath(caseSensitive: false)
+        // TODO
     }
     
     override func didReceiveMemoryWarning() {
